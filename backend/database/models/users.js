@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
     country: { type: String },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    role: {type: String, default: true}
   });
   userSchema.pre("save", async function () {
     this.email = this.email.toLowerCase();

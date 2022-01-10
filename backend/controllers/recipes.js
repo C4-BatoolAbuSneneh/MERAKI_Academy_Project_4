@@ -1,8 +1,9 @@
 const recipesModel = require("../database/models/recipes")
 
 const createNewRecipe = (req, res) => {
-    const { title, description ,time} = req.body;
+    const {image,title, description ,time} = req.body;
     const newRecipe = new recipesModel({
+        image,
       title,
       description,
       time,
@@ -13,14 +14,34 @@ const createNewRecipe = (req, res) => {
         res.status(201).json({
             success:true,
             message: `recipe created`,
-            author: result
-        }).catch((err) => {
+            result: result,
+        })
+    })
+        .catch((err) => {
             res.status(500).json({
                 success:false,
-                message:`server error`
+                message:`server error`,
+                err: err,
+            
+        })
+    })
+  }
+  const getAllRecipes = (req,res) => {  
+      recipesModel
+    .find({})
+    .then((recipes) => {
+        res.status(200).json({
+           success: true,
+           message: `All the recipes`,
+           recipes: recipes
+        })
+        .catch(err => {
+            res.status(500).json({
+                success: false,
+                message: `No recipe yet`,
+                err:err
             })
         })
     })
   }
-  
-module.exports = {createNewRecipe};
+module.exports = {createNewRecipe, getAllRecipes};

@@ -1,7 +1,7 @@
 const usersModel = require("../database/models/users");
 
 const createNewAuthor = (req, res) => {
-    const { firstName, lastName, age, country, email, password } = req.body;
+    const { firstName, lastName, age, country, email, password, role } = req.body;
     const user = new usersModel({
       firstName,
       lastName,
@@ -9,6 +9,7 @@ const createNewAuthor = (req, res) => {
       country,
       email,
       password,
+      role
     });
   
     user
@@ -17,7 +18,7 @@ const createNewAuthor = (req, res) => {
           res.status(201).json({
           success: true,
           message: `Success Author Added`,
-          author: result,
+          result: result,
         });
       })
       .catch((err) => {
