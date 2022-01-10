@@ -69,9 +69,10 @@ const createNewRecipe = (req, res) => {
          })
   }
   const updateRecipesById = (req,res) => {
-      const _id = req.params.id;
+      const recipe = req.params.id;
+      let id  = req.body
       recipesModel
-      .findByIdAndUpdate(_id, req.body, { new: true })
+      .findByIdAndUpdate({_id:recipe}, id , { new: true })
       .then((result) => {          
         if (!result) {
             return res.status(404).json({
@@ -88,8 +89,11 @@ const createNewRecipe = (req, res) => {
         .catch((err) => {
             res.status(500).json({
                 success:false,
-                message: `Server Error`
+                message: `Server Error`, err:err
             });
         });
   };
+  const deleteRecipeById = (req,res) => {
+
+  }
 module.exports = {createNewRecipe, getAllRecipes,getRecipesById,updateRecipesById};
