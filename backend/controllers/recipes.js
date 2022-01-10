@@ -1,10 +1,11 @@
 const recipesModel = require("../database/models/recipes")
 
 const createNewRecipe = (req, res) => {
-    const { title, description } = req.body;
+    const { title, description ,time} = req.body;
     const newRecipe = new recipesModel({
       title,
       description,
+      time,
     });
     newRecipe
     .save()
@@ -21,6 +22,5 @@ const createNewRecipe = (req, res) => {
         })
     })
   }
-
   
 module.exports = {createNewRecipe};
