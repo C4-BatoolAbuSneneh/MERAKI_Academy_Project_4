@@ -1,4 +1,3 @@
-const { findById } = require("../database/models/recipes");
 const recipesModel = require("../database/models/recipes")
 
 const createNewRecipe = (req, res) => {
@@ -69,4 +68,28 @@ const createNewRecipe = (req, res) => {
              })
          })
   }
-module.exports = {createNewRecipe, getAllRecipes,getRecipesById};
+  const updateRecipesById = (req,res) => {
+      const _id = req.params.id;
+      recipesModel
+      .findByIdAndUpdate(_id, req.body, { new: true })
+      .then((result) => {          
+        if (!result) {
+            return res.status(404).json({
+                success: false,
+                message: `The Recipe ${_id} is not found`
+            })
+        }
+         res.status(202).json({
+            success: true,
+            message: `recipe updated`,
+            recipe: result
+        });
+        })
+        .catch((err) => {
+            res.status(500).json({
+                success:false,
+                message: `Server Error`
+            });
+        });
+  };
+module.exports = {createNewRecipe, getAllRecipes,getRecipesById,updateRecipesById};
