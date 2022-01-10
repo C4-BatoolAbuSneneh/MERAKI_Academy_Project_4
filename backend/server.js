@@ -3,6 +3,8 @@ const cors = require("cors");
 require("dotenv").config();
 const app = express();
 const db = require("./database/db");
+const bcrypt = require("bcrypt");
+
 
 //Import Routers
 const recipesRouter = require("./routes/recipes")
