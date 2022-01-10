@@ -6,7 +6,6 @@ const db = require("./database/db");
 
 //Import Routers
 const recipesRouter = require("./routes/recipes")
-const usersRouter = require("./routes/users")
 app.use(cors());
 app.use(express.json());
 
@@ -14,7 +13,6 @@ app.use(express.json());
 
 //Routes Middleware
 app.use("/recipes", recipesRouter)
-app.use("/users", usersRouter)
 
 
 const PORT = 5000;
