@@ -18,7 +18,7 @@ const createNewAuthor = (req, res) => {
           res.status(201).json({
           success: true,
           message: `Success Author Added`,
-          result: result,
+          author: result,
         });
       })
       .catch((err) => {
