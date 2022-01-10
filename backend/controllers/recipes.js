@@ -1,3 +1,4 @@
+const { findById } = require("../database/models/recipes");
 const recipesModel = require("../database/models/recipes")
 
 const createNewRecipe = (req, res) => {
@@ -35,13 +36,37 @@ const createNewRecipe = (req, res) => {
            message: `All the recipes`,
            recipes: recipes
         })
+    })
         .catch(err => {
             res.status(500).json({
                 success: false,
                 message: `No recipe yet`,
                 err:err
-            })
+            
         })
     })
   }
-module.exports = {createNewRecipe, getAllRecipes};
+  const getRecipesById = (req,res) => {
+      let id = req.query.id;
+      recipesModel
+      .findById(id)
+      .then((result) => {
+         if (!result) {
+             return res.status(404).json({
+                 success: false,
+                 message: `The Recipe not found`
+             })
+         } res.status(200).json({
+             success: true,
+             message: `The recipe ${id}`,
+             result: result
+         });
+         })
+         .catch((err) => {
+             res.status(500).json({
+                 success:false,
+                 message: `Server Error`
+             })
+         })
+  }
+module.exports = {createNewRecipe, getAllRecipes,getRecipesById};
