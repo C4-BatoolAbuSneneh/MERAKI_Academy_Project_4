@@ -1,15 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navigation = () => {
+const Navigation = ({isLogedIn,token}) => {
   return (
     <>
-      <Link className="Link" to="/register">
+    {isLogedIn ? (
+        <>
+         <Link className="Link3" to="/recipe">
+        recipe
+      </Link>
+        </>
+    ) : (
+        <>
+           <Link className="Link" to="/register">
         Register
       </Link>
       <Link className="Link2" to="/login">
         login
       </Link>
+        </>
+    )}
     </>
   );
 };
