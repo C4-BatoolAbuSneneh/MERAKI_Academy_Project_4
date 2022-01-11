@@ -12,17 +12,14 @@ const AllRecipe = ({ token }) => {
     getAllRecipes();
   }, []);
   const getAllRecipes = () => {
-    console.log(token);
     axios
       .get(`http://localhost:5000/recipes/all`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((result) => {
-        console.log(result);
         setRecipes(result.data.recipes);
       })
       .catch((err) => {
-        console.log(err);
       });
   };
   const myRecipe =
