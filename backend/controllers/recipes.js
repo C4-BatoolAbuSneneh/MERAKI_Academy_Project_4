@@ -3,7 +3,7 @@ const recipesModel = require("../database/models/recipes")
 const createNewRecipe = (req, res) => {
     const {image,title, description ,time} = req.body;
     const newRecipe = new recipesModel({
-        image,
+      image,
       title,
       description,
       time,
@@ -89,7 +89,7 @@ const createNewRecipe = (req, res) => {
         .catch((err) => {
             res.status(500).json({
                 success:false,
-                message: `Server Error`, err:err
+                message: `Server Error`
             });
         });
   };
