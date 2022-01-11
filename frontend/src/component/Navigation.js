@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navigation = ({isLogedIn,token}) => {
+const Navigation = ({isLogedIn}) => {
   return (
     <>
     {isLogedIn ? (
         <>
          <Link className="Link3" to="/recipe">
         recipe
+      </Link>
+      <Link className="Link3" to="/recipes">
+        allrecipes
       </Link>
         </>
     ) : (
