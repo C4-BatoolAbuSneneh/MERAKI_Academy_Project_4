@@ -1,9 +1,17 @@
+import React from "react"
 import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import Navigation from "./component/Navigation";
+import Register from "./component/Register"
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome To App</h1>
+      <Navigation/>
+      <Routes>
+      <Route path="/register" element={<Register />} />
+      <Route/>
+      </Routes>
     </div>
   );
 }
