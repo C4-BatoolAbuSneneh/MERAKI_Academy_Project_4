@@ -5,6 +5,8 @@ const AllRecipe = ({token}) => {
     const [recipes, setRecipes] = useState([]);
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
+    const [time, setTime] = useState("");
+    const [image, setImage] = useState("");
     const [pargraph, setParagraph] = useState("");
     const [userId, setUserId] = useState("");
 
@@ -13,7 +15,7 @@ const AllRecipe = ({token}) => {
     }, []);
     const getAllRecipes = () => {
         axios
-          .get(`http://localhost:5000/recipes`, {
+          .get(`http://localhost:5000/recipes`,{image,title,description,time}, {
             headers: { Authorization: `Bearer ${token}` },
           })
           .then((result) => {
@@ -21,21 +23,60 @@ const AllRecipe = ({token}) => {
             setUserId(result.data.userId)
           })
           .catch((err) => {
-           
           });
       };
-
-
-
-  return (
-      <>
-        <></>
-  <></>
-  <></>
-
       
-      </>
-      )
+
+const myRecipe = recipes && recipes.map((ele,i) => {
+    return (
+        <>
+        <div key={i}>
+          <p className="title" key={ele.title}>
+            {" "}
+            {ele.title}
+          </p>
+          <p className="description" key={ele.description}>
+            {" "}
+            {ele.description}
+          </p>
+          <br />
+
+          <input
+            onChange={(e) => {
+              setTitle(e.target.value);
+             
+            }}
+            placeholder="update title"
+          ></input>
+          <br />
+          <br />
+          <textarea
+            onChange={(e) => {
+                setDescription(e.target.value);
+               
+            }}
+            placeholder="update description"
+          ></textarea>
+          <br />
+        </div>
+        );
+    );
+        
+        </>
+    )
+})
+return (
+    <>
+          <button  style={{cursor:"pointer",fontSize:"15px",margin:"10px",padding: "5px 15px"}} onClick={getAllRecipes}>
+        {" "}
+        get all recipes{" "}
+      </button>
+
+    
+        {myRecipe}
+
+    </>
+)
 }
 
 export default AllRecipe;
