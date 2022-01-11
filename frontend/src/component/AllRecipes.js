@@ -22,6 +22,9 @@ const AllRecipe = ({ token }) => {
       .catch((err) => {
       });
   };
+  const deleteRecipesById = () => {
+    axios.delete(``)
+  }
   const myRecipe =
     recipes &&
     recipes.map((ele, i) => {

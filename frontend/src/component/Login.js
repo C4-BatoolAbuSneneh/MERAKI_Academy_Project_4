@@ -13,7 +13,7 @@ const Login = ({setToken, setIsLoggedIn}) => {
         onChange={(e) => {
           setEmail(e.target.value);
         }}
-        type={"text"}
+        type="text"
         placeholder="your email"
         className="email"
       ></input>
@@ -21,7 +21,7 @@ const Login = ({setToken, setIsLoggedIn}) => {
         onChange={(e) => {
           setPassword(e.target.value);
         }}
-        type={"password"}
+        type="password"
         placeholder="your password"
         className="password"
       ></input>

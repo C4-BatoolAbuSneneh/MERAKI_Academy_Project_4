@@ -6,11 +6,11 @@ const Navigation = ({isLogedIn}) => {
     <>
     {isLogedIn ? (
         <>
-         <Link className="Link3" to="/recipe">
+         <Link className="Link3" to="/recipes">
         recipe
       </Link>
-      <Link className="Link3" to="/recipes">
-        allrecipes
+      <Link className="Link4" to="/all">
+        allRecipes
       </Link>
         </>
     ) : (
