@@ -10,18 +10,19 @@ const Recipe = ({token}) => {
     const [paragraph, setParagraph] = useState("");
 
     const createRecipe = () => {
-        axios.post("http://localhost:5000/articles", {title,description,time},{ headers: { Authorization: `Bearer ${token}` } 
+        axios.post("http://localhost:5000/recipes", {title,description,time},
+        { headers: { Authorization: `Bearer ${token}` } 
     }).then((response) => {
+        
         setParagraph("The recipe has been created successfully")
     }).catch((err) => {
         setParagraph("Error happened while creating a new recipe, please try again"
         )
     })
     }
-    
     return (
 <>
-<div className="">
+<div className="input">
 {/* <img src={burger} alt="burger" /> */}
 <input onChange={(e) => {
     setTitle(e.target.value)
@@ -33,12 +34,10 @@ const Recipe = ({token}) => {
     setTime(e.target.value)
 }} type="text" placeholder="write your time"></input>
 <button onClick={createRecipe}>create new recipe</button>
-
-
+<p>{paragraph}</p>
 </div>
 </>
-
-    )
+)
 }
 
 export default Recipe;
