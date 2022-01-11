@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Login = () => {
+const Login = ({setToken, setIsLoggedIn}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [paragraph, setParagraph] = useState("");
+  const [status, setStatus] = useState("")
 
   return (
     <>
@@ -32,9 +33,13 @@ const Login = () => {
               password,
             })
             .then((result) => {
+                setIsLoggedIn(true);
+                setToken(result.data.token);
               setParagraph("your login is successful");
             })
             .catch((err) => {
+                setIsLoggedIn(false);
+                setStatus(err.response.data.message);
               setParagraph("your email or password is not correct ");
             });
         }}
