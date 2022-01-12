@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import Login from "./Login";
 
-const Navigation = ({isLogedIn}) => {
+const Navigation = ({isLogedIn,isAdmin}) => {
   return (
     <>
     {isLogedIn ? (
         <>
-         <Link className="Link3" to="/recipes">
+         {isAdmin?<Link className="Link3" to="/recipes">
         recipe
-      </Link>
+      </Link>:<></>}
       <Link className="Link4" to="/all">
         allRecipes
       </Link>
+      <Link onClick={Login} to="/login" className="log">
+              {" "}
+                Logout{" "}
+            </Link>{" "}
         </>
     ) : (
         <>
