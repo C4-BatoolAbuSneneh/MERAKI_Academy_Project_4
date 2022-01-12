@@ -1,33 +1,49 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Login from "./Login";
 
-const Navigation = ({isLogedIn,isAdmin}) => {
+const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
+  const navigate = useNavigate();
+
+  const handelLogout = () => {
+    localStorage.removeItem("token");
+    setIsAdmin(false);
+    setIsLoggedIn(false);
+    navigate("/login");
+  };
+  const token = localStorage.getItem("token");
   return (
     <>
-    {isLogedIn ? (
+      {isLogedIn || token ? (
         <>
-         {isAdmin?<Link className="Link3" to="/recipes">
-        recipe
-      </Link>:<></>}
-      <Link className="Link4" to="/all">
-        allRecipes
-      </Link>
-      <Link onClick={Login} to="/login" className="log">
-              {" "}
-                Logout{" "}
-            </Link>{" "}
+          {isAdmin ? (
+            <Link className="recipe" to="/recipes">
+              NewRecipe
+            </Link>
+          ) : (
+            <></>
+          )}
+          <Link className="allrecipe" to="/all">
+            All
+          </Link>
+          <Link className="logout" onClick={handelLogout} to="/login">
+            {" "}
+            Logout{" "}
+          </Link>{" "}
+          <Link className="my" to="/myfavourite">
+            MyFavourite
+          </Link>
         </>
-    ) : (
+      ) : (
         <>
-           <Link className="Link" to="/register">
-        Register
-      </Link>
-      <Link className="Link2" to="/login">
-        login
-      </Link>
+          <Link className="register" to="/register">
+            Register
+          </Link>
+          <Link className="login" to="/login">
+            login
+          </Link>
         </>
-    )}
+      )}
     </>
   );
 };
