@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import burger from './image'
+
 const NewRecipes = ({ token }) => {
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [ingredients, setIngredients] = useState("");
   const [time, setTime] = useState("");
   const [paragraph, setParagraph] = useState("");
 
@@ -12,7 +13,7 @@ const NewRecipes = ({ token }) => {
     axios
       .post(
         "http://localhost:5000/recipes",
-        { image, title, description, time },
+        { image, title,ingredients, description, time },
         { headers: { Authorization: `Bearer ${token}` } }
       )
       .then((response) => {
@@ -27,7 +28,6 @@ const NewRecipes = ({ token }) => {
   return (
     <>
       <div className="input">
-        {/* <img src={burger} alt="burger" /> */}
         <input
           onChange={(e) => {
             setImage(e.target.value);
@@ -35,7 +35,6 @@ const NewRecipes = ({ token }) => {
           type="text"
           placeholder="click image"
         ></input>
-
         <input
           onChange={(e) => {
             setTitle(e.target.value);
@@ -43,6 +42,9 @@ const NewRecipes = ({ token }) => {
           type="text"
           placeholder="write your title"
         ></input>
+        <textarea onChange={(e) => {
+          setIngredients(e.target.value)
+        }} placeholder="Write your ingredients"></textarea>
         <textarea
           onChange={(e) => {
             setDescription(e.target.value);
@@ -50,6 +52,7 @@ const NewRecipes = ({ token }) => {
           type="text"
           placeholder="write your description"
         ></textarea>
+        
         <input
           onChange={(e) => {
             setTime(e.target.value);
