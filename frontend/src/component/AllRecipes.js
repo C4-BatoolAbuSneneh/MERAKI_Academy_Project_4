@@ -7,7 +7,6 @@ const AllRecipe = ({ token }) => {
   const [description, setDescription] = useState("");
   const [time, setTime] = useState("");
   const [image, setImage] = useState("");
-
   useEffect(() => {
     getAllRecipes();
   }, []);
@@ -22,8 +21,18 @@ const AllRecipe = ({ token }) => {
       .catch((err) => {
       });
   };
-  const deleteRecipesById = () => {
-    axios.delete(``)
+  const deleteRecipesById = (id) => {
+    axios.delete(`http://localhost:5000/recipes/${id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+    .then((result) => {
+      getAllRecipes()
+      
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
   }
   const myRecipe =
     recipes &&
@@ -33,21 +42,22 @@ const AllRecipe = ({ token }) => {
           <div key={i}>
             <p className="image" key={ele.image}>
               {" "}
-              {ele.image}
+             image: {ele.image}
             </p>
             <p className="title" key={ele.title}>
               {" "}
-              {ele.title}
+              title: {ele.title}
             </p>
             <p className="description" key={ele.description}>
               {" "}
-              {ele.description}
+             description: {ele.description}
             </p>
             <p className="time" key={ele.time}>
               {" "}
-              {ele.time}
+              time : {ele.time}
             </p>
             <br />
+            <button onClick={() => deleteRecipesById(ele._id)}>delete</button>
           </div>
         </>
       );
