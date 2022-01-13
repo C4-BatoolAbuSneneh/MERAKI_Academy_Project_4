@@ -1,13 +1,37 @@
 .App {
-  background-image: url("https://i.pinimg.com/564x/4d/46/a5/4d46a5a2aa4f38ab380279758eb48472.jpg");
+  /* opacity: 0.8; */
+  background-image: url("https://i.pinimg.com/564x/04/61/51/046151c869fa711bae31ee0fbdf9bbcc.jpg") ;
   border: 2px solid black;
-  padding: 25px;
+  padding: 40px;
   background-repeat: repeat;
   background-size: cover;
-  /* display: flex; */
+}
+.email{
+  height: 30px;
+  width: 40%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 5px;
+  transform: translate(110%, 20%);
+
+}
+.ee{
+  width: 70%;
+}
+.loginbutton{
+  transform: translate(110%, 20%);
+font-size: 18px;
+  border-radius: 10px;
+  height: 38px;
+  width: 41%;
+  color: white;
+  background-color: rgb(218, 107, 16)
+
 }
 .loginpage{
-  padding: 25px;
+  align-self: center;
+/* display: grid; */
+  /* padding:  -15px; */
   background-repeat: repeat;
   background-size: cover;
 }
@@ -38,6 +62,7 @@
   font-size: 30px;
   width: 500px;
   display: flex;
+  background:#f3f3f3fb;
   /* align-items: right; */
   /* justify-content: right; */
 }
