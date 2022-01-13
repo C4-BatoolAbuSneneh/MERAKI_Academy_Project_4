@@ -7,6 +7,7 @@ const login = (req, res) => {
   const email = req.body.email.toLowerCase();
   userModel
     .findOne({ email })
+    .populate("role", "-_id -__v")
     .then(async (result) => {
       if (!result) {
         return res.status(404).json({
@@ -35,6 +36,7 @@ const login = (req, res) => {
           success: true,
           message: `Valid login credentials`,
           token: token,
+          role: result.role
         });
       } catch (error) {
         throw new Error(error.message);

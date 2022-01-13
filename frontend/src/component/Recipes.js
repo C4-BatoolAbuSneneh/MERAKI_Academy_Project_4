@@ -13,7 +13,7 @@ const NewRecipes = ({ token }) => {
     axios
       .post(
         "http://localhost:5000/recipes",
-        { image, title,ingredients, description, time },
+        { image, title, ingredients, description, time },
         { headers: { Authorization: `Bearer ${token}` } }
       )
       .then((response) => {
@@ -27,7 +27,12 @@ const NewRecipes = ({ token }) => {
   };
   return (
     <>
+      <br />
+      <br />
       <div className="input">
+        <br />
+        <br />
+
         <input
           onChange={(e) => {
             setImage(e.target.value);
@@ -35,6 +40,9 @@ const NewRecipes = ({ token }) => {
           type="text"
           placeholder="click image"
         ></input>
+        <br />
+        <br />
+
         <input
           onChange={(e) => {
             setTitle(e.target.value);
@@ -42,17 +50,8 @@ const NewRecipes = ({ token }) => {
           type="text"
           placeholder="write your title"
         ></input>
-        <textarea onChange={(e) => {
-          setIngredients(e.target.value)
-        }} placeholder="Write your ingredients"></textarea>
-        <textarea
-          onChange={(e) => {
-            setDescription(e.target.value);
-          }}
-          type="text"
-          placeholder="write your description"
-        ></textarea>
-        
+        <br />
+        <br />
         <input
           onChange={(e) => {
             setTime(e.target.value);
@@ -60,8 +59,56 @@ const NewRecipes = ({ token }) => {
           type="text"
           placeholder="write your time"
         ></input>
+        <br />
+        <br />
+
+        <textarea
+          onChange={(e) => {
+            setIngredients(e.target.value);
+          }}
+          placeholder="Write your ingredients"
+        ></textarea>
+        <br />
+        <br />
+
+        <textarea
+          onChange={(e) => {
+            setDescription(e.target.value);
+          }}
+          type="text"
+          placeholder="write your description"
+        ></textarea>
+        <br />
+        <br />
+
+        <br />
+
+        <br />
         <button onClick={createRecipe}>create new recipe</button>
+        <br />
+        <br />
         <p>{paragraph}</p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </>
   );

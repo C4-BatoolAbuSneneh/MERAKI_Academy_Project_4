@@ -7,6 +7,7 @@ import Login from "./component/Login";
 import Recipes from "./component/Recipes";
 import AllRecipe from "./component/AllRecipes";
 import MyFavourite from "./component/MyFavourite";
+import About from "./component/About";
 function App() {
   let [token, setToken] = useState("");
   token = localStorage.getItem("token");
@@ -21,6 +22,9 @@ function App() {
         setIsAdmin={setIsAdmin}
         setIsLoggedIn={setIsLoggedIn}
       />
+      <>
+      
+      </>
       <Routes>
         <Route path="/register" element={<Register />} />
         <Route
@@ -31,8 +35,12 @@ function App() {
               setIsAdmin={setIsAdmin}
               setToken={setToken}
             />
-          }
-        />
+
+          }   
+
+        />  
+           <Route path="/about" element={<About />} /> 
+
         <Route
           path="/recipes"
           element={isAdmin ? <Recipes token={token} /> : <p>Not Admin</p>}

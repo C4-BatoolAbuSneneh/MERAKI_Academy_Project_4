@@ -4,7 +4,6 @@ import Login from "./Login";
 
 const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
   const navigate = useNavigate();
-
   const handelLogout = () => {
     localStorage.removeItem("token");
     setIsAdmin(false);
@@ -30,7 +29,7 @@ const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
             {" "}
             Logout{" "}
           </Link>{" "}
-          <Link className="my" to="/myfavourite">
+          <Link className="my" to="/my">
             MyFavourite
           </Link>
         </>
@@ -44,6 +43,9 @@ const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
           </Link>
         </>
       )}
+      <Link className="about" to="/about">
+        About
+      </Link>
     </>
   );
 };

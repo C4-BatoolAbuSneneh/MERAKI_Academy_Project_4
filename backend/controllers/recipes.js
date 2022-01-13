@@ -1,10 +1,11 @@
 const recipesModel = require("../database/models/recipes")
 
 const createNewRecipe = (req, res) => {
-    const {image,title, description ,time} = req.body;
+    const {image,title, ingredients,description ,time} = req.body;
     const newRecipe = new recipesModel({
       image,
       title,
+      ingredients,
       description,
       time,
     });
@@ -22,7 +23,6 @@ const createNewRecipe = (req, res) => {
                 success:false,
                 message:`server error`,
                 err: err,
-            
         })
     })
   }

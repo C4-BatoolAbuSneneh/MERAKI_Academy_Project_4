@@ -11,7 +11,8 @@ const Register = () => {
   const [paragraph, setParagraph] = useState("");
   return (
     <>
-      <div className="register">
+      <div className="registerpage">
+        <br /> <br />
         <input
           onChange={(e) => {
             setFirstName(e.target.value);
@@ -19,6 +20,7 @@ const Register = () => {
           type="text"
           placeholder="Your First Name"
         ></input>
+        <br /> <br />
         <input
           onChange={(e) => {
             setLastName(e.target.value);
@@ -26,6 +28,7 @@ const Register = () => {
           type="text"
           placeholder="Your Last Name"
         ></input>
+        <br /> <br />
         <input
           onChange={(e) => {
             setEmail(e.target.value);
@@ -33,6 +36,7 @@ const Register = () => {
           type="email"
           placeholder="Your Email"
         ></input>
+        <br /> <br />
         <input
           onChange={(e) => {
             setPassword(e.target.value);
@@ -40,6 +44,7 @@ const Register = () => {
           type="password"
           placeholder="Your Password"
         ></input>
+        <br /> <br />
         <input
           onChange={(e) => {
             setAge(e.target.value);
@@ -47,6 +52,7 @@ const Register = () => {
           type="text"
           placeholder="Your Age"
         ></input>
+        <br /> <br />
         <input
           onChange={(e) => {
             setCountry(e.target.value);
@@ -54,6 +60,8 @@ const Register = () => {
           type="text"
           placeholder="Your Country"
         ></input>
+        <br />
+        <br />
         <button
           onClick={() => {
             axios
@@ -75,7 +83,11 @@ const Register = () => {
         >
           Register
         </button>
-        <p>{paragraph}</p>
+        <br />
+        <p style={{ color: "black", fontSize: "25px", fontFamily: "fantasy" }}>
+          {paragraph}
+        </p>
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
       </div>
     </>
   );

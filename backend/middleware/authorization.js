@@ -5,8 +5,8 @@ const authorization = (req, res, next) => {
     res.status(403).json({
       success: false,
       message: "Unauthorized",
+      role:req.token.role
     });
   }
 };
-
 module.exports = authorization;
