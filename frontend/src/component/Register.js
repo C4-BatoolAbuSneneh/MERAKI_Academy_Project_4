@@ -6,19 +6,23 @@ const Register = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [age, setAge] = useState("");
-  const [country, setCountry] = useState("");
   const [paragraph, setParagraph] = useState("");
   return (
     <>
       <div className="registerpage">
-        <br /> <br />
+        <br /> 
+        <div style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}}>
+        <h1 style={{height:"1.3em",width:"90%",textAlign:"center",color:"white", fontFamily:"initial", fontStyle:"italic"}}>Daily Recipe</h1>
+        <h3 style={{width:"90%",textAlign:"center",color:"white", fontFamily:"sans-serif"}}>Register</h3>
+        </div>
+        <div className="input2">
         <input
           onChange={(e) => {
             setFirstName(e.target.value);
           }}
           type="text"
           placeholder="Your First Name"
+          className="email1"
         ></input>
         <br /> <br />
         <input
@@ -27,6 +31,7 @@ const Register = () => {
           }}
           type="text"
           placeholder="Your Last Name"
+          className="email1"
         ></input>
         <br /> <br />
         <input
@@ -35,6 +40,7 @@ const Register = () => {
           }}
           type="email"
           placeholder="Your Email"
+          className="email1"
         ></input>
         <br /> <br />
         <input
@@ -43,23 +49,10 @@ const Register = () => {
           }}
           type="password"
           placeholder="Your Password"
+          className="email1"
         ></input>
         <br /> <br />
-        <input
-          onChange={(e) => {
-            setAge(e.target.value);
-          }}
-          type="text"
-          placeholder="Your Age"
-        ></input>
-        <br /> <br />
-        <input
-          onChange={(e) => {
-            setCountry(e.target.value);
-          }}
-          type="text"
-          placeholder="Your Country"
-        ></input>
+        </div>
         <br />
         <br />
         <button
@@ -70,8 +63,6 @@ const Register = () => {
                 lastName,
                 email,
                 password,
-                age,
-                country,
               })
               .then((result) => {
                 setParagraph("The user has been created successfully");
@@ -79,15 +70,15 @@ const Register = () => {
               .catch((err) => {
                 setParagraph("Error happened while register, please try again");
               });
-          }}
+          }} className="buttonregister"
         >
           Register
         </button>
         <br />
-        <p style={{ color: "black", fontSize: "25px", fontFamily: "fantasy" }}>
+        <p style={{ color: "white", fontSize: "25px", fontFamily: "monospace", textAlign:"center" }}>
           {paragraph}
         </p>
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        {/* <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> */}
       </div>
     </>
   );

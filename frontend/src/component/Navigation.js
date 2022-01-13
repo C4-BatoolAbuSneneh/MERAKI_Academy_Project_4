@@ -38,6 +38,7 @@ const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
           <Link className="register" to="/register">
             Register
           </Link>
+
           <Link className="login" to="/login">
             login
           </Link>

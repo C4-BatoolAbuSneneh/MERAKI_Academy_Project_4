@@ -9,13 +9,20 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
   return (
     <>
       <div className="loginpage">
-        <br /> <br />
+        <br/>
+      {/* <img style={{ width: "200px" }} src={""} /> */}
+<div style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}}>
+        <h1 style={{height:"1.3em",width:"90%",textAlign:"center",color:"white", fontFamily:"initial", fontStyle:"italic"}}>Daily Recipe</h1>
+        <h3 style={{width:"90%",textAlign:"center",color:"white", fontFamily:"sans-serif"}}>Sign In</h3>
+        </div>
+        <div className="ee">
+        <br/><br/>
         <input
           onChange={(e) => {
             setEmail(e.target.value);
           }}
           type="text"
-          placeholder="your email"
+          placeholder=" Email Address"
           className="email"
         ></input>
         <br /> <br />
@@ -24,10 +31,10 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
             setPassword(e.target.value);
           }}
           type="password"
-          placeholder="your password"
-          className="password"
+          placeholder=" Password"
+          className="email"
         ></input>
-        <br /> <br />
+        <br /> <br />  <br />
         <button
           onClick={() => {
             axios
@@ -51,14 +58,15 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
           className="loginbutton"
         >
           {" "}
-          login{" "}
+          Sign In{" "}
         </button>
+        </div>
         <br />
-        <p style={{ color: "black", fontSize: "25px", fontFamily: "fantasy" }}>
+        <p style={{ color: "white", fontSize: "25px", fontFamily: "monospace", textAlign:"center"}}>
           {paragraph}
         </p>
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
-        <br /> <br /> <br /> <br /> <br /> <br />
+        {/* <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+        <br /> <br /> <br /> <br /> <br /> <br /> */}
       </div>
     </>
   );

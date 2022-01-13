@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
 
 const AllRecipe = ({ isAdmin }) => {
 
@@ -135,7 +134,7 @@ const AllRecipe = ({ isAdmin }) => {
     });
   return (
     <>
-      <div className="ui search">
+      {/* <div className="ui search">
         <div className="ui icon input">
           <input
             type="text"
@@ -147,7 +146,7 @@ const AllRecipe = ({ isAdmin }) => {
         </div>
       </div>
       <br />
-      <div className="ui called list"></div>
+      <div className="ui called list"></div> */}
 
       <div className="buttonall" onClick={getAllRecipes}>
         {" "}
