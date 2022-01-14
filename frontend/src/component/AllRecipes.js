@@ -67,7 +67,11 @@ const AllRecipe = ({ isAdmin }) => {
           <br /> <br />
           <div key={i} className="allpage">
             {" "}
+            
+            <div className="newr">
+            <br /> <br />
             <img style={{ width: "30%" }} src={ele.image} />
+            <br/> <br/>
             <p className="title"> {ele.title}</p>
             {/* <i class="glyphicon glyphicon-thumbs-up"></i> */}
             {/* <i class="far fa-clock"></i> */}
@@ -79,6 +83,7 @@ const AllRecipe = ({ isAdmin }) => {
             <button onClick={() => addToLocalStorge(ele)} className="myfavor">
               MyFavourite{" "}
             </button>
+            <br />
             <br />
             {isAdmin ? (
               <div>
@@ -136,10 +141,13 @@ const AllRecipe = ({ isAdmin }) => {
                 </button>
                 <br />
                 <br />
+                
               </div>
             ) : (
               <></>
+              
             )}
+            </div>
           </div>
         </>
       );

@@ -9,11 +9,12 @@ const Register = () => {
   const [paragraph, setParagraph] = useState("");
   return (
     <>
-      <div className="registerpage">
+      <div className="registerpage" style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}}>
         <br /> 
-        <div style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}}>
+        <div >
         <h1 style={{height:"1.3em",width:"90%",textAlign:"center",color:"white", fontFamily:"initial", fontStyle:"italic"}}>Daily Recipe</h1>
         <h3 style={{width:"90%",textAlign:"center",color:"white", fontFamily:"sans-serif"}}>Register</h3>
+        <br/>
         </div>
         <div className="input2">
         <input
@@ -74,7 +75,7 @@ const Register = () => {
         >
           Register
         </button>
-        <br />
+        
         <p style={{
             color: "white",
             fontSize: "25px",
@@ -85,8 +86,9 @@ const Register = () => {
           }} >
           {paragraph}
         </p>
-        {/* <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> */}
+         
       </div>
+      <br />
     </>
   );
 };

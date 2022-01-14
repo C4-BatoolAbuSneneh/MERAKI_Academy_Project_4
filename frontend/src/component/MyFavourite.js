@@ -14,13 +14,19 @@ const MyFavourite = () => {
   };
   return (
     <>
+     
       <div className="myfavourite">
+      
         {favaritList.map((ele) => {
           return (
             <>
               <br />
               <br />
+
               <div key={ele._id} className="mypage">
+              <div className="newr">
+              <br />
+              <br />
                 <img style={{ width: "30%" }} src={ele.image} />
                 <p
                   className="title "
@@ -56,6 +62,8 @@ const MyFavourite = () => {
                 >
                   delete
                 </button>
+                <br/><br/>
+</div>
               </div>
             </>
           );

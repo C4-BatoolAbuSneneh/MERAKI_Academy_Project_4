@@ -28,9 +28,9 @@ const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
           <Link className="my" to="/my">
             MyFavourite
           </Link>
-          <Link className="about" to="/about">
+          {/* <Link className="about" to="/about">
             About
-          </Link>
+          </Link> */}
           <Link className="logout" onClick={handelLogout} to="/login">
             {" "}
             Logout{" "}

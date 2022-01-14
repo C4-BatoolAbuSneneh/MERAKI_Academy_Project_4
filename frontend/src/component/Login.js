@@ -8,12 +8,11 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
   const [status, setStatus] = useState("");
   return (
     <>
-      <div className="loginpage">
-        <br />
-        <div style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+      <div className="loginpage" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+      <br /> 
+       <div >
           <h1
             style={{
-              height: "1.3em",
               width: "90%",
               textAlign: "center",
               color: "white",
@@ -33,6 +32,7 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
           >
             Sign In
           </h3>
+         
         </div>
         <div className="ee">
           <br />
@@ -96,7 +96,7 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
         </p>
        
       </div>
-   <br /> 
+   <br /> <br /> <br /> 
     </>
      
   );
