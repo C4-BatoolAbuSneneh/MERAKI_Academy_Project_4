@@ -10,7 +10,6 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
     <>
       <div className="loginpage">
         <br />
-        {/* <img style={{ width: "200px" }} src={""} /> */}
         <div style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
           <h1
             style={{

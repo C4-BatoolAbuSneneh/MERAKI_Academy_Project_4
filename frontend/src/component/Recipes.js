@@ -39,6 +39,7 @@ const NewRecipes = ({ token }) => {
           }}
           type="text"
           placeholder="click image"
+          className="rec"
         ></input>
         <br />
         <br />
@@ -48,7 +49,8 @@ const NewRecipes = ({ token }) => {
             setTitle(e.target.value);
           }}
           type="text"
-          placeholder="write your title"
+          placeholder="Title"
+          className="rec"
         ></input>
         <br />
         <br />
@@ -57,7 +59,8 @@ const NewRecipes = ({ token }) => {
             setTime(e.target.value);
           }}
           type="text"
-          placeholder="write your time"
+          className="rec"
+          placeholder="Time"
         ></input>
         <br />
         <br />
@@ -66,7 +69,8 @@ const NewRecipes = ({ token }) => {
           onChange={(e) => {
             setIngredients(e.target.value);
           }}
-          placeholder="Write your ingredients"
+          placeholder="Ingredients"
+          className="rec"
         ></textarea>
         <br />
         <br />
@@ -76,18 +80,18 @@ const NewRecipes = ({ token }) => {
             setDescription(e.target.value);
           }}
           type="text"
-          placeholder="write your description"
+          placeholder="Description"
+          className="rec"
         ></textarea>
+        {/* <br />
         <br />
+        <br /> */}
         <br />
-
-        <br />
-
-        <br />
-        <button onClick={createRecipe}>create new recipe</button>
+        <button className="buttonnew" onClick={createRecipe}>create new recipe</button>
         <br />
         <br />
         <p>{paragraph}</p>
+        {/* <br />
         <br />
         <br />
         <br />
@@ -107,8 +111,7 @@ const NewRecipes = ({ token }) => {
         <br />
         <br />
         <br />
-        <br />
-        <br />
+        <br /> */}
       </div>
     </>
   );

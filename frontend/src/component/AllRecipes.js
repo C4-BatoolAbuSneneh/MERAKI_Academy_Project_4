@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const AllRecipe = ({ isAdmin }) => {
-
   const [recipes, setRecipes] = useState([]);
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
@@ -65,15 +64,18 @@ const AllRecipe = ({ isAdmin }) => {
     recipes.map((ele, i) => {
       return (
         <>
-          <div key={i}>
+         <br />
+          <div key={i} className="allpage">
             <br />
             <br />
-            <img className="img"  src={ele.image} />
+            <img style={{ width: "30%"}} src={ele.image} />
             <p className="title"> {ele.title}</p>
             <p className="time"> {ele.time}</p>
             <p className="ingredient"> Ingredients : {ele.ingredients}</p>
             <p className="description"> Description: {ele.description}</p>
-            <button onClick={() => addToLocalStorge(ele)}>MyFavourite </button>
+            <button onClick={() => addToLocalStorge(ele)} className="myfavor">
+              MyFavourite{" "}
+            </button>
             <br />
             {isAdmin ? (
               <div>
@@ -83,7 +85,8 @@ const AllRecipe = ({ isAdmin }) => {
                   onChange={(e) => {
                     setTitle(e.target.value);
                   }}
-                  placeholder="title"
+                  className="tit"
+                  placeholder="Title"
                 ></input>
                 <br />
                 <br />
@@ -91,7 +94,8 @@ const AllRecipe = ({ isAdmin }) => {
                   onChange={(e) => {
                     setTime(e.target.value);
                   }}
-                  placeholder="time"
+                  className="tit"
+                  placeholder="Time"
                 ></input>
                 <br />
                 <br />
@@ -99,7 +103,8 @@ const AllRecipe = ({ isAdmin }) => {
                   onChange={(e) => {
                     setIngredients(e.target.value);
                   }}
-                  placeholder="ingredients"
+                  className="tite"
+                  placeholder="Ingredients"
                 ></textarea>
                 <br />
                 <br />
@@ -107,20 +112,24 @@ const AllRecipe = ({ isAdmin }) => {
                   onChange={(e) => {
                     setDescription(e.target.value);
                   }}
-                  placeholder="description"
+                  className="tite"
+                  placeholder="Description"
                 ></textarea>
                 <br />
                 <br />
                 <button
+                  className="update"
                   onClick={() => updateRecipesById(ele._id)}
-                  placeholder="update"
                 >
-                  update
+                  Update
                 </button>
                 <br />
                 <br />
-                <button onClick={() => deleteRecipesById(ele._id)}>
-                  delete
+                <button
+                  className="delete"
+                  onClick={() => deleteRecipesById(ele._id)}
+                >
+                  Delete
                 </button>
                 <br />
                 <br />

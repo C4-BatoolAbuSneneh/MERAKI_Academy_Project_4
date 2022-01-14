@@ -25,13 +25,16 @@ const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
           <Link className="allrecipe" to="/all">
             All
           </Link>
+          <Link className="my" to="/my">
+            MyFavourite
+          </Link>
+          <Link className="about" to="/about">
+            About
+          </Link>
           <Link className="logout" onClick={handelLogout} to="/login">
             {" "}
             Logout{" "}
           </Link>{" "}
-          <Link className="my" to="/my">
-            MyFavourite
-          </Link>
         </>
       ) : (
         <>
@@ -44,9 +47,6 @@ const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
           </Link>
         </>
       )}
-      <Link className="about" to="/about">
-        About
-      </Link>
     </>
   );
 };

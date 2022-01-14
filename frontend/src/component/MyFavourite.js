@@ -20,13 +20,16 @@ const MyFavourite = () => {
         {favaritList.map((ele) => {
           return (
             <>
-              <div key={ele._id}>
-                <img style={{ width: "350px" }} src={ele.image} />
-                <p className="title"> {ele.title}</p>
-                <p className="time"> {ele.time}</p>
-                <p className="ingredient"> Ingredients : {ele.ingredients}</p>
-                <p className="description"> Description: {ele.description}</p>
-                <button onClick={() => handelRemove(ele._id)}>delete</button>
+            <br/>
+              <div key={ele._id} className="mypage">
+              <br/>    
+              <br/>    
+                <img style={{ width: "30%"}} src={ele.image} />
+                <p className="title " style={{fontSize:"30px", color:"white"}}> {ele.title}</p>
+                <p className="time" style={{fontSize:"30px", color:"white"}}> {ele.time}</p>
+                <p className="ingredient" style={{fontSize:"30px", color:"white"}}> Ingredients : {ele.ingredients}</p>
+                <p className="discription" style={{fontSize:"30px", color:"white"}}> Description: {ele.description}</p>
+                <button onClick={() => handelRemove(ele._id)} className="myfavor" >delete</button>
               </div>
             </>
           );
