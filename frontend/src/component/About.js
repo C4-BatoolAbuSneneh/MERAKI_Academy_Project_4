@@ -1,7 +1,8 @@
 import React from "react";
 const About = () => {
   return (
-    
+    <div>
+      <br/>  <br/>
     <>
       <p
         style={{
@@ -18,6 +19,8 @@ const About = () => {
         </span>{" "}
       </p>
     </>
+    </div>
+
   );
 };
 

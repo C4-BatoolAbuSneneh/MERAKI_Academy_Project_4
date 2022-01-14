@@ -75,7 +75,14 @@ const Register = () => {
           Register
         </button>
         <br />
-        <p style={{ color: "white", fontSize: "25px", fontFamily: "monospace", textAlign:"center" }}>
+        <p style={{
+            color: "white",
+            fontSize: "25px",
+            fontFamily: "monospace",
+            padding:"30px",
+            width:"87%",
+            textAlign: "center",
+          }} >
           {paragraph}
         </p>
         {/* <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> */}

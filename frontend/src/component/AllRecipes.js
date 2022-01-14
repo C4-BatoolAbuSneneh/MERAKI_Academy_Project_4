@@ -68,7 +68,7 @@ const AllRecipe = ({ isAdmin }) => {
           <div key={i}>
             <br />
             <br />
-            <img style={{ width: "350px" }} src={ele.image} />
+            <img className="img"  src={ele.image} />
             <p className="title"> {ele.title}</p>
             <p className="time"> {ele.time}</p>
             <p className="ingredient"> Ingredients : {ele.ingredients}</p>
