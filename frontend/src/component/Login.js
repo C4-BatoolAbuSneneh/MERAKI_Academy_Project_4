@@ -94,10 +94,11 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
         >
           {paragraph}
         </p>
-        {/* <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
-        <br /> <br /> <br /> <br /> <br /> <br /> */}
+       
       </div>
+   <br /> 
     </>
+     
   );
 };
 

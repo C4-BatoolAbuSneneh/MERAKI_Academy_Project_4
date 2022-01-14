@@ -1,7 +1,7 @@
 import React from "react";
 const About = () => {
   return (
-    <div>
+    <div className="aboutpage">
       <br/>  <br/>
     <>
       <p
@@ -12,13 +12,15 @@ const About = () => {
           textAlign: "start",
         }}
       > 
-        DON'T WAIT TO <span style={{ fontFamily: "fantasy" }}>COOK</span> YOUR{" "}
+        DON'T WAIT TO <span style={{fontFamily: "fantasy" }}>COOK</span> YOUR{" "}
         <br />{" "}
         <span style={{ fontSize: "40px", fontFamily: "Fantasy" }}>
           FAVOURITE DISH
         </span>{" "}
       </p>
     </>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
     </div>
 
   );

@@ -16,13 +16,13 @@ const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
       {isLogedIn || token ? (
         <>
           {isAdmin ? (
-            <Link className="recipe" to="/recipes">
+            <Link  className="recipe" to="/recipes">
               NewRecipe
             </Link>
           ) : (
             <></>
           )}
-          <Link className="allrecipe" to="/all">
+          <Link  className="allrecipe" to="/all">
             All
           </Link>
           <Link className="my" to="/my">
@@ -41,9 +41,8 @@ const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
           <Link className="register" to="/register">
             Register
           </Link>
-
           <Link className="login" to="/login">
-            login
+          Sign In
           </Link>
         </>
       )}

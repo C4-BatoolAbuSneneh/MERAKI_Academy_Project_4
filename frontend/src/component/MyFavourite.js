@@ -5,8 +5,6 @@ const MyFavourite = () => {
   favaritList = JSON.parse(localStorage.getItem("favourite")) || [];
 
   const handelRemove = (id) => {
-
-
     const favaritFilter = favaritList.filter((item) => item._id != id);
 
     if (favaritFilter) {
@@ -20,16 +18,44 @@ const MyFavourite = () => {
         {favaritList.map((ele) => {
           return (
             <>
-            <br/>
+              <br />
+              <br />
               <div key={ele._id} className="mypage">
-              <br/>    
-              <br/>    
-                <img style={{ width: "30%"}} src={ele.image} />
-                <p className="title " style={{fontSize:"30px", color:"white"}}> {ele.title}</p>
-                <p className="time" style={{fontSize:"30px", color:"white"}}> {ele.time}</p>
-                <p className="ingredient" style={{fontSize:"30px", color:"white"}}> Ingredients : {ele.ingredients}</p>
-                <p className="discription" style={{fontSize:"30px", color:"white"}}> Description: {ele.description}</p>
-                <button onClick={() => handelRemove(ele._id)} className="myfavor" >delete</button>
+                <img style={{ width: "30%" }} src={ele.image} />
+                <p
+                  className="title "
+                  style={{ fontSize: "30px", color: "white" }}
+                >
+                  {" "}
+                  {ele.title}
+                </p>
+                <p
+                  className="time"
+                  style={{ fontSize: "30px", color: "white" }}
+                >
+                  {" "}
+                  {ele.time}
+                </p>
+                <p
+                  className="ingredient"
+                  style={{ fontSize: "30px", color: "white" }}
+                >
+                  {" "}
+                  Ingredients : {ele.ingredients}
+                </p>
+                <p
+                  className="discription"
+                  style={{ fontSize: "30px", color: "white" }}
+                >
+                  {" "}
+                  Description: {ele.description}
+                </p>
+                <button
+                  onClick={() => handelRemove(ele._id)}
+                  className="myfavor"
+                >
+                  delete
+                </button>
               </div>
             </>
           );

@@ -16,6 +16,7 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
   return (
     <div className="App">
+
       <Navigation
         isLogedIn={isLogedIn}
         isAdmin={isAdmin}

@@ -64,12 +64,15 @@ const AllRecipe = ({ isAdmin }) => {
     recipes.map((ele, i) => {
       return (
         <>
-         <br />
+          <br /> <br />
           <div key={i} className="allpage">
-            <br />
-            <br />
-            <img style={{ width: "30%"}} src={ele.image} />
+            {" "}
+            <img style={{ width: "30%" }} src={ele.image} />
             <p className="title"> {ele.title}</p>
+            {/* <i class="glyphicon glyphicon-thumbs-up"></i> */}
+            {/* <i class="far fa-clock"></i> */}
+            {/* <i class="far fa-clock">&#xe424;</i> */}
+            {/* <i style={{fontSize:"80px"}} class='fas fa-bullhorn'>&#xf0a1;</i> */}
             <p className="time"> {ele.time}</p>
             <p className="ingredient"> Ingredients : {ele.ingredients}</p>
             <p className="description"> Description: {ele.description}</p>
