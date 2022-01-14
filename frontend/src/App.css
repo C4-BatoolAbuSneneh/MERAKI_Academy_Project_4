@@ -1,135 +1,261 @@
-.App {
-  /* opacity: 0.8; */
-  background-image: url("https://i.pinimg.com/564x/04/61/51/046151c869fa711bae31ee0fbdf9bbcc.jpg") ;
-  border: 2px solid black;
-  padding: 40px;
-  background-repeat: repeat;
-  background-size: cover;
-}
-.email{
-  height: 30px;
-  width: 40%;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 5px;
-  transform: translate(110%, 20%);
+@media screen and (min-width: 200px), (max-width: 500px) {
+  .App {
+    /* opacity: 0.8; */
+    background-image: url("https://i.pinimg.com/564x/04/61/51/046151c869fa711bae31ee0fbdf9bbcc.jpg");
+    border: 2px solid black;
+    padding: 40px;
+    background-repeat: repeat;
 
-}
-.ee{
-  width: 70%;
-}
-.loginbutton{
-  transform: translate(110%, 20%);
-font-size: 18px;
-  border-radius: 10px;
-  height: 38px;
-  width: 41%;
-  color: white;
-  background-color: rgb(218, 107, 16)
-
-}
-.loginpage{
-  align-self: center;
-/* display: grid; */
-  /* padding:  -15px; */
-  background-repeat: repeat;
-  background-size: cover;
-}
-.about{
+    background-size: cover;
+  }
+  .registerpage {
+    align-self: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .email1 {
+    height: 28px;
+    width: 28%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    transform: translate(110%, 20%);
+  }
+  .email {
+    height: 30px;
+    width: 40%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    transform: translate(110%, 20%);
+  }
+  .ee {
+    width: 70%;
+  }
+  .loginbutton {
+    transform: translate(110%, 20%);
+    font-size: 18px;
+    border-radius: 10px;
+    height: 38px;
+    width: 41%;
+    color: white;
+    background-color: rgb(218, 107, 16);
+  }
+  .allpage{
+    background-color: rgba(0, 0, 0, 0.4)
+  }
+  .buttonregister {
+    transform: translate(110%, 20%);
+    font-size: 18px;
+    border-radius: 10px;
+    height: 38px;
+    width: 28.5%;
+    color: white;
+    background-color: rgb(218, 107, 16);
+  }
+  .loginpage {
+    align-self: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .about {
+    /* media="screen and (min-width:0px) and (max-width: 480px)" */
     text-decoration: none;
-  float: left;
-  display: block;
-  color: black;
-  font-size: 20px;
-  padding: 2px 16px;
-
-}
-.myfavourite{
-  padding: 25px;
-  background-repeat: repeat;
-  background-size: cover;
-}
-.my{
-  text-decoration: none;
-  float: left;
-  display: block;
-  color: black;
-  font-size: 20px;
-  padding: 2px 16px;
-
-}
-.title{
-  font-size: 30px;
-  width: 500px;
-  display: flex;
-  background:#f3f3f3fb;
-  /* align-items: right; */
-  /* justify-content: right; */
-}
-.ingredient{
-  font-size: 25px;
-}
-.description{
-  font-size: 25px;
-}
-.time{
-  font-size: 30px;
-}
-.registerpage{
-  padding: 25px;
-  background-repeat: repeat;
-  background-size: cover;
-}
-.allrecipe {
-  text-decoration: none;
-  float: left;
-  display: block;
-  color: black;
-  font-size: 20px;
-  padding: 2px 16px;
-}
-.login {
-  text-decoration: none;
-  float: left;
-  display: block;
-  color: black;
-  font-size: 20px;
-  padding: 2px 16px;
-}
-.login:hover {
-  text-decoration-line: underline;
-}
-.register {
-  text-decoration: none;
-
-  float: left;
-  display: block;
-  color: black;
-  font-size: 20px;
-  padding: 2px 16px;
-}
-.register:hover {
-  text-decoration-line: underline;
-}
-.logout {
-  text-decoration: none;
-  float: left;
-  display: block;
-  color: black;
-  font-size: 20px;
-  padding: 2px 16px;
-}
-.recipe {
-  text-decoration: none;
-  float: left;
-  display: block;
-  color: black;
-  font-size: 20px;
-  padding: 2px 16px;
-}
-.buttonall{
-cursor: pointer;
-border-top: black;
-height: 25px;
-width: 120px;
+    float: left;
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 2px 16px;
+    margin: 5px;
+    background-color: rgb(218, 107, 16);
+  }
+  .myfavourite {
+    padding: 25px;
+    background-repeat: repeat;
+    background-size: cover;
+    /* display: grid; */
+  }
+  .my {
+    text-decoration: none;
+    float: left;
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 2px 16px;
+    background-color: rgb(218, 107, 16);
+    margin: 5px;
+  }
+  .title {
+    font-size: 30px;
+    width: 500px;
+    color: white;
+    width: 80%;
+  }
+  .ingredient {
+    /* transform: translate(7%, -800%); */
+    font-size: 25px;
+    width: 500px;
+    color: white;
+    width: 80%;
+  }
+  .description {
+    font-size: 25px;
+    float: right;
+    width: 500px;
+    color: white;
+    width: 100%;
+  }
+  .rec {
+    height: 30px;
+    width: 28%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    transform: translate(10%, 20%);
+  }
+  .buttonnew {
+    transform: translate(10%, 60%);
+    font-size: 18px;
+    border-radius: 10px;
+    height: 38px;
+    width: 28.5%;
+    color: white;
+    background-color: rgb(218, 107, 16);
+  }
+  .time {
+    font-size: 30px;
+    width: 500px;
+    color: white;
+  }
+  .allrecipe {
+    text-decoration: none;
+    float: left;
+    grid-template-columns: 50%;
+    color: black;
+    font-size: 20px;
+    padding: 2px 16px;
+    background-color: rgb(218, 107, 16);
+    margin: 5px;
+  }
+  .login {
+    text-decoration: none;
+    float: left;
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 2px 16px;
+    background-color: rgb(218, 107, 16);
+    margin: 5px;
+  }
+  .mypage{
+  background-color: rgba(0, 0, 0, 0.5)
+  }
+  .t {
+    font-size: 30px;
+    transform: translate(-50%, -880%);
+    font-size: 25px;
+    width: 500px;
+    color: white;
+    /* style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }} */
+  }
+  .about:hover {
+    text-decoration-line: underline;
+  }
+  .login:hover {
+    text-decoration-line: underline;
+  }
+  .register {
+    text-decoration: none;
+    background-color: rgb(218, 107, 16);
+    margin: 5px;
+    /* float: left; */
+    display: inline-block;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    padding: 2px 16px;
+  }
+  .register:hover {
+    text-decoration-line: underline;
+  }
+  .allrecipe:hover {
+    text-decoration-line: underline;
+  }
+  .my:hover {
+    text-decoration-line: underline;
+  }
+  .logout:hover {
+    text-decoration-line: underline;
+  }
+  .logout {
+    text-decoration: none;
+    float: left;
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 2px 16px;
+    background-color: rgb(218, 107, 16);
+    margin: 5px;
+  }
+  .recipe {
+    text-decoration: none;
+    float: left;
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 2px 16px;
+    background-color: rgb(218, 107, 16);
+    margin: 5px;
+  }
+  .tit {
+    height: 30px;
+    width: 13%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    transform: translate(10%, -380%);
+  }
+  .tite {
+    height: 30px;
+    width: 13%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    transform: translate(130%, -680%);
+  }
+  .update {
+    transform: translate(8%, -600%);
+    font-size: 15px;
+    border-radius: 10px;
+    height: 38px;
+    width: 14%;
+    color: white;
+    background-color: rgb(218, 107, 16);
+  }
+  .delete {
+    transform: translate(123%, -750%);
+    font-size: 15px;
+    border-radius: 10px;
+    height: 38px;
+    width: 14%;
+    color: white;
+    background-color: rgb(218, 107, 16);
+  }
+  .recipe:hover {
+    text-decoration-line: underline;
+  }
+  .buttonall {
+    cursor: pointer;
+    border-top: black;
+    height: 25px;
+    width: 120px;
+  }
+  .myfavor {
+    font-size: 15px;
+    border-radius: 10px;
+    height: 35px;
+    width: 100px;
+    color: white;
+    background-color: rgb(218, 107, 16);
+  }
 }
