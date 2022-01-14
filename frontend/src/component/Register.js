@@ -9,50 +9,74 @@ const Register = () => {
   const [paragraph, setParagraph] = useState("");
   return (
     <>
-      <div className="registerpage" style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}}>
-        <br /> 
-        <div >
-        <h1 style={{height:"1.3em",width:"90%",textAlign:"center",color:"white", fontFamily:"initial", fontStyle:"italic"}}>Daily Recipe</h1>
-        <h3 style={{width:"90%",textAlign:"center",color:"white", fontFamily:"sans-serif"}}>Register</h3>
-        <br/>
+      <br /> <br />
+      <div
+        className="registerpage"
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+      >
+        <br />
+        <div>
+          <h1
+            style={{
+              height: "1.3em",
+              width: "90%",
+              textAlign: "center",
+              color: "white",
+              fontFamily: "initial",
+              fontStyle: "italic",
+            }}
+          >
+            Daily Recipe
+          </h1>
+          <h3
+            style={{
+              width: "90%",
+              textAlign: "center",
+              color: "white",
+              fontFamily: "sans-serif",
+            }}
+          >
+            Register
+          </h3>
+          <br />
         </div>
         <div className="input2">
-        <input
-          onChange={(e) => {
-            setFirstName(e.target.value);
-          }}
-          type="text"
-          placeholder="Your First Name"
-          className="email1"
-        ></input>
-        <br /> <br />
-        <input
-          onChange={(e) => {
-            setLastName(e.target.value);
-          }}
-          type="text"
-          placeholder="Your Last Name"
-          className="email1"
-        ></input>
-        <br /> <br />
-        <input
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          type="email"
-          placeholder="Your Email"
-          className="email1"
-        ></input>
-        <br /> <br />
-        <input
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          type="password"
-          placeholder="Your Password"
-          className="email1"
-        ></input>
-        <br /> <br />
+          <input
+            onChange={(e) => {
+              setFirstName(e.target.value);
+            }}
+            type="text"
+            placeholder="Your First Name"
+            className="email1"
+          ></input>
+          <br /> <br />
+          <input
+            onChange={(e) => {
+              setLastName(e.target.value);
+            }}
+            type="text"
+            placeholder="Your Last Name"
+            className="email1"
+          ></input>
+          <br /> <br />
+          <input
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            type="email"
+            placeholder="Your Email"
+            className="email1"
+          ></input>
+          <br /> <br />
+          <input
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            type="password"
+            placeholder="Your Password"
+            className="email1"
+          ></input>
+          <br /> <br />
         </div>
         <br />
         <br />
@@ -71,24 +95,24 @@ const Register = () => {
               .catch((err) => {
                 setParagraph("Error happened while register, please try again");
               });
-          }} className="buttonregister"
+          }}
+          className="buttonregister"
         >
           Register
         </button>
-        
-        <p style={{
+        <p
+          style={{
             color: "white",
             fontSize: "25px",
             fontFamily: "monospace",
-            padding:"30px",
-            width:"87%",
+            padding: "30px",
+            width: "87%",
             textAlign: "center",
-          }} >
+          }}
+        >
           {paragraph}
         </p>
-         
       </div>
-      <br />
     </>
   );
 };

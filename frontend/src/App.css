@@ -1,7 +1,6 @@
 @media screen and (min-width: 200px), (max-width: 500px) {
   .App {
-    background-image: url("https://as2.ftcdn.net/v2/jpg/02/16/41/71/1000_F_216417127_HqIBtqk0zeHPuXKAUTMMi9IUeuSRvc53.jpg");
-    /* background-image: url("https://i.pinimg.com/564x/04/61/51/046151c869fa711bae31ee0fbdf9bbcc.jpg"); */
+    background-image: url("https://image.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg");
     border: 2px solid black;
     padding: 40px;
     background-repeat: repeat;
@@ -40,7 +39,7 @@
     color: white;
     background-color: rgb(218, 107, 16);
   }
- 
+
   .buttonregister {
     transform: translate(110%, 20%);
     font-size: 18px;
@@ -52,7 +51,7 @@
   }
   .loginpage {
     align-self: center;
-    background-repeat: repeat;
+    /* background-repeat: repeat; */
     background-size: cover;
   }
   .about {
@@ -67,8 +66,11 @@
     padding: 2px 16px;
     margin: 5px;
   }
+  .allpage {
+    background-repeat: repeat;
+    background-size: cover;
+  }
   .myfavourite {
-    padding: 25px;
     background-repeat: repeat;
     background-size: cover;
   }
@@ -104,17 +106,17 @@
     border-radius: 5px;
     transform: translate(10%, 20%);
   }
-  .newr{
+  .newr {
     background-color: rgba(0, 0, 0, 0.8);
-padding: 0% 5%;  }
+    padding: 0% 5%;
+  }
   .buttonnew {
     transform: translate(10%, 60%);
     font-size: 18px;
     border-radius: 10px;
     height: 38px;
-    width: 28.5%;
+    width: 28%;
     background-color: rgb(218, 107, 16);
-
     color: white;
   }
   .time {
@@ -212,24 +214,38 @@ padding: 0% 5%;  }
     padding: 2px 16px;
     margin: 5px;
   }
-  .tit {
-    height: 40%;
+  .tit{
+    /* height: 40%; */
     width: 13%;
     background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 5px;
-    transform: translate(8%, 40%);
+    transform: translate(8%, -70%);
   }
-  .tite {
-    height: 30px;
+  .ingred{
     width: 13%;
     background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 5px;
-    transform: translate(130%, -250%);
+    transform: translate(8%, -120%);
+  }
+  .timee{
+    width: 13%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    transform: translate(120%, -250%);
+  }
+  .describ{
+    width: 13%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    transform: translate(120%, -270%);
+
   }
   .update {
-    transform: translate(8%, -200%);
+    transform: translate(5%, -340%);
     font-size: 15px;
     border-radius: 10px;
     height: 38px;
@@ -238,7 +254,7 @@ padding: 0% 5%;  }
     background-color: rgb(218, 107, 16);
   }
   .delete {
-    transform: translate(123%, -350%);
+    transform: translate(110%, -495%);
     font-size: 15px;
     border-radius: 10px;
     height: 38px;
