@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import "./AllRecipe.css"
 const AllRecipe = ({ isAdmin }) => {
   const [recipes, setRecipes] = useState([]);
   const [image, setImage] = useState("");
@@ -87,6 +87,7 @@ const AllRecipe = ({ isAdmin }) => {
               <br />
               {isAdmin ? (
                 <div>
+                  
                   <br />
                   <br />
 

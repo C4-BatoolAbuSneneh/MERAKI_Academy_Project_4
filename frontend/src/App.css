@@ -6,54 +6,6 @@
     background-repeat: repeat;
     background-size: cover;
   }
-  .registerpage {
-    align-self: center;
-    background-repeat: repeat;
-    background-size: cover;
-  }
-  .email1 {
-    height: 28px;
-    width: 28%;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5px;
-    transform: translate(110%, 20%);
-  }
-  .email {
-    height: 30px;
-    width: 40%;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5px;
-    transform: translate(110%, 20%);
-  }
-  .ee {
-    width: 70%;
-  }
-  .loginbutton {
-    transform: translate(110%, 20%);
-    font-size: 18px;
-    border-radius: 10px;
-    height: 38px;
-    width: 40%;
-    color: white;
-    background-color: rgb(218, 107, 16);
-  }
-
-  .buttonregister {
-    transform: translate(110%, 20%);
-    font-size: 18px;
-    border-radius: 10px;
-    height: 38px;
-    width: 28%;
-    color: white;
-    background-color: rgb(218, 107, 16);
-  }
-  .loginpage {
-    align-self: center;
-    /* background-repeat: repeat; */
-    background-size: cover;
-  }
   .about {
     background-color: rgba(0, 0, 0, 0.3);
 
@@ -66,31 +18,7 @@
     padding: 2px 16px;
     margin: 5px;
   }
-  .allpage {
-    background-repeat: repeat;
-    background-size: cover;
-  }
-  .myfavourite {
-    background-repeat: repeat;
-    background-size: cover;
-  }
-  .my {
-    background-color: rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    float: left;
-    display: block;
-    color: rgb(218, 107, 16);
-    font-family: unset;
-    font-size: 20px;
-    padding: 2px 16px;
-    margin: 5px;
-  }
-  .ingredient {
-    font-size: 25px;
-    width: 500px;
-    color: white;
-    width: 80%;
-  }
+  
   .description {
     font-size: 25px;
     float: right;
@@ -136,17 +64,6 @@
     padding: 2px 16px;
     margin: 5px;
   }
-  .login {
-    background-color: rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    float: left;
-    display: block;
-    color: rgb(218, 107, 16);
-    font-family: unset;
-    font-size: 20px;
-    padding: 2px 16px;
-    margin: 5px;
-  }
   .title {
     font-size: 25px;
     float: right;
@@ -158,26 +75,7 @@
     color: rgb(218, 107, 16);
     text-decoration-line: underline;
   }
-  .login:hover {
-    color: rgb(218, 107, 16);
-    text-decoration-line: underline;
-  }
-  .register {
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin: 5px;
-    font-family: unset;
-    display: inline-block;
-    color: rgb(218, 107, 16);
-    font-size: 20px;
-    text-align: center;
-    padding: 2px 16px;
-  }
-  .register:hover {
-    color: rgb(218, 107, 16);
-
-    text-decoration-line: underline;
-  }
+ 
   .allrecipe:hover {
     color: rgb(218, 107, 16);
     text-decoration-line: underline;
@@ -214,35 +112,38 @@
     padding: 2px 16px;
     margin: 5px;
   }
-  .tit{
+  .tit {
     /* height: 40%; */
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px green solid;
     width: 13%;
     background-color: rgb(0, 0, 0);
     color: white;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     transform: translate(8%, -70%);
   }
-  .ingred{
+  .ingred {
     width: 13%;
     background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 5px;
     transform: translate(8%, -120%);
   }
-  .timee{
+  .timee {
     width: 13%;
     background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 5px;
     transform: translate(120%, -250%);
   }
-  .describ{
+  .describ {
     width: 13%;
     background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 5px;
     transform: translate(120%, -270%);
-
   }
   .update {
     transform: translate(5%, -340%);

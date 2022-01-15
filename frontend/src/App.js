@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./component/Navigation";
-import Register from "./component/Register";
-import Login from "./component/Login";
+import Register from "./component/Register/Register";
+import Login from "./component/login/Login"
 import Recipes from "./component/Recipes";
-import AllRecipe from "./component/AllRecipes";
+import AllRecipe from "./component/All/AllRecipes";
 import MyFavourite from "./component/MyFavourite";
 function App() {
   let [token, setToken] = useState("");

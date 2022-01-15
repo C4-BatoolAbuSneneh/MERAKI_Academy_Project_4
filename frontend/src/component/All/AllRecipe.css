@@ -1,0 +1,26 @@
+.allpage {
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  .myfavourite {
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .my {
+    background-color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    float: left;
+    display: block;
+    color: rgb(218, 107, 16);
+    font-family: unset;
+    font-size: 20px;
+    padding: 2px 16px;
+    margin: 5px;
+  }
+  .ingredient {
+    font-size: 25px;
+    width: 500px;
+    color: white;
+    width: 80%;
+  }
