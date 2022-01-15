@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 const MyFavourite = () => {
-  let [favaritList, setFavoritList] = useState([]);
+  let [favoriteList, setFavoritList] = useState([]);
 
-  favaritList = JSON.parse(localStorage.getItem("favourite")) || [];
+favoriteList = JSON.parse(localStorage.getItem("favourite")) || [];
 
   const handelRemove = (id) => {
-    const favaritFilter = favaritList.filter((item) => item._id != id);
-
+    const favaritFilter = favoriteList.filter((item) => item._id != id);
     if (favaritFilter) {
       localStorage.setItem("favourite", JSON.stringify(favaritFilter));
       setFavoritList(JSON.parse(localStorage.getItem("favourite")) || []);
@@ -14,56 +13,56 @@ const MyFavourite = () => {
   };
   return (
     <>
-     
+      <br />
       <div className="myfavourite">
-      
-        {favaritList.map((ele) => {
+        {favoriteList.map((ele) => {
           return (
             <>
               <br />
               <br />
 
               <div key={ele._id} className="mypage">
-              <div className="newr">
-              <br />
-              <br />
-                <img style={{ width: "30%" }} src={ele.image} />
-                <p
-                  className="title "
-                  style={{ fontSize: "30px", color: "white" }}
-                >
-                  {" "}
-                  {ele.title}
-                </p>
-                <p
-                  className="time"
-                  style={{ fontSize: "30px", color: "white" }}
-                >
-                  {" "}
-                  {ele.time}
-                </p>
-                <p
-                  className="ingredient"
-                  style={{ fontSize: "30px", color: "white" }}
-                >
-                  {" "}
-                  Ingredients : {ele.ingredients}
-                </p>
-                <p
-                  className="discription"
-                  style={{ fontSize: "30px", color: "white" }}
-                >
-                  {" "}
-                  Description: {ele.description}
-                </p>
-                <button
-                  onClick={() => handelRemove(ele._id)}
-                  className="myfavor"
-                >
-                  delete
-                </button>
-                <br/><br/>
-</div>
+                <div className="newr">
+                  <br />
+                  <br />
+                  <img style={{ width: "30%" }} src={ele.image} />
+                  <p
+                    className="title "
+                    style={{ fontSize: "30px", color: "white" }}
+                  >
+                    {" "}
+                    {ele.title}
+                  </p>
+                  <p
+                    className="time"
+                    style={{ fontSize: "30px", color: "white" }}
+                  >
+                    {" "}
+                    {ele.time}
+                  </p>
+                  <p
+                    className="ingredient"
+                    style={{ fontSize: "30px", color: "white" }}
+                  >
+                    {" "}
+                    Ingredients : {ele.ingredients}
+                  </p>
+                  <p
+                    className="discription"
+                    style={{ fontSize: "30px", color: "white" }}
+                  >
+                    {" "}
+                    Description: {ele.description}
+                  </p>
+                  <button
+                    onClick={() => handelRemove(ele._id)}
+                    className="myfavor"
+                  >
+                    delete
+                  </button>
+                  <br />
+                  <br />
+                </div>
               </div>
             </>
           );

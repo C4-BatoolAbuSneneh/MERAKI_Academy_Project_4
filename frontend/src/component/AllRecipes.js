@@ -5,7 +5,7 @@ const AllRecipe = ({ isAdmin }) => {
   const [recipes, setRecipes] = useState([]);
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
-  const [ingredients, setIngredients] = useState("");
+  const [ingredients, setIngredients] = useState([]);
   const [description, setDescription] = useState("");
   const [time, setTime] = useState("");
 
@@ -67,86 +67,83 @@ const AllRecipe = ({ isAdmin }) => {
           <br /> <br />
           <div key={i} className="allpage">
             {" "}
-            
             <div className="newr">
-            <br /> <br />
-            <img style={{ width: "30%" }} src={ele.image} />
-            <br/> <br/>
-            <p className="title"> {ele.title}</p>
-            {/* <i class="glyphicon glyphicon-thumbs-up"></i> */}
-            {/* <i class="far fa-clock"></i> */}
-            {/* <i class="far fa-clock">&#xe424;</i> */}
-            {/* <i style={{fontSize:"80px"}} class='fas fa-bullhorn'>&#xf0a1;</i> */}
-            <p className="time"> {ele.time}</p>
-            <p className="ingredient"> Ingredients : {ele.ingredients}</p>
-            <p className="description"> Description: {ele.description}</p>
-            <button onClick={() => addToLocalStorge(ele)} className="myfavor">
-              MyFavourite{" "}
-            </button>
-            <br />
-            <br />
-            {isAdmin ? (
-              <div>
-                <br />
-                <br />
-                <input
-                  onChange={(e) => {
-                    setTitle(e.target.value);
-                  }}
-                  className="tit"
-                  placeholder="Title"
-                ></input>
-                <br />
-                <br />
-                <input
-                  onChange={(e) => {
-                    setTime(e.target.value);
-                  }}
-                  className="tit"
-                  placeholder="Time"
-                ></input>
-                <br />
-                <br />
-                <textarea
-                  onChange={(e) => {
-                    setIngredients(e.target.value);
-                  }}
-                  className="tite"
-                  placeholder="Ingredients"
-                ></textarea>
-                <br />
-                <br />
-                <textarea
-                  onChange={(e) => {
-                    setDescription(e.target.value);
-                  }}
-                  className="tite"
-                  placeholder="Description"
-                ></textarea>
-                <br />
-                <br />
-                <button
-                  className="update"
-                  onClick={() => updateRecipesById(ele._id)}
-                >
-                  Update
-                </button>
-                <br />
-                <br />
-                <button
-                  className="delete"
-                  onClick={() => deleteRecipesById(ele._id)}
-                >
-                  Delete
-                </button>
-                <br />
-                <br />
-                
-              </div>
-            ) : (
-              <></>
-              
-            )}
+              <br /> <br />
+              <img style={{ width: "30%" }} src={ele.image} />
+              <br /> <br />
+              <p className="title"> {ele.title}</p>
+              {/* <i class="fab fa-accusoft"></i> */}
+              {/* <i class="glyphicon glyphicon-thumbs-up"></i> */}
+              {/* <i className="far fa-clock"></i> */}
+              {/* <i class="far fa-clock">&#xe424;</i> */}
+              {/* <i style={{fontSize:"80px"}} class='fas fa-bullhorn'>&#xf0a1;</i> */}
+              <p className="time"> {ele.time}</p>
+              <p className="ingredient"> Ingredients : {ele.ingredients}</p>
+              <p className="description"> Description: {ele.description}</p>
+              <button onClick={() => addToLocalStorge(ele)} className="myfavor">
+                MyFavourite{" "}
+              </button>
+              <br />
+              <br />
+              {isAdmin ? (
+                <div>
+                  <br />
+                  <br />
+
+                  <input
+                    onChange={(e) => {
+                      setTitle(e.target.value);
+                    }}
+                    className="tit"
+                    placeholder="Title"
+                  ></input>
+                  <br />
+                  <br />
+                  <input
+                    onChange={(e) => {
+                      setTime(e.target.value);
+                    }}
+                    className="timee"
+                    placeholder="Time"
+                  ></input>
+                  <br />
+                  <br />
+                  <textarea
+                    onChange={(e) => {
+                      setIngredients(e.target.value);
+                    }}
+                    className="ingred"
+                    placeholder="Ingredients"
+                  ></textarea>
+                  <br />
+                  <br />
+                  <textarea
+                    onChange={(e) => {
+                      setDescription(e.target.value);
+                    }}
+                    className="describ"
+                    placeholder="Description"
+                  ></textarea>
+                  <br />
+                  <br />
+                  <button
+                    className="update"
+                    onClick={() => updateRecipesById(ele._id)}
+                  >
+                    Update
+                  </button>
+                  <br />
+                  <br />
+                  <button
+                    className="delete"
+                    onClick={() => deleteRecipesById(ele._id)}
+                  >
+                    Delete
+                  </button>
+                </div>
+              ) : (
+                <></>
+              )}
             </div>
           </div>
         </>

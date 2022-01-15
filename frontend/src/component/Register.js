@@ -46,7 +46,7 @@ const Register = () => {
               setFirstName(e.target.value);
             }}
             type="text"
-            placeholder="Your First Name"
+            placeholder=" First Name"
             className="email1"
           ></input>
           <br /> <br />
@@ -55,7 +55,7 @@ const Register = () => {
               setLastName(e.target.value);
             }}
             type="text"
-            placeholder="Your Last Name"
+            placeholder=" Last Name"
             className="email1"
           ></input>
           <br /> <br />
@@ -64,7 +64,7 @@ const Register = () => {
               setEmail(e.target.value);
             }}
             type="email"
-            placeholder="Your Email"
+            placeholder=" Email Address"
             className="email1"
           ></input>
           <br /> <br />
@@ -73,7 +73,7 @@ const Register = () => {
               setPassword(e.target.value);
             }}
             type="password"
-            placeholder="Your Password"
+            placeholder=" Password"
             className="email1"
           ></input>
           <br /> <br />

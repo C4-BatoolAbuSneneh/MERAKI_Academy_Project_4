@@ -32,7 +32,6 @@ const NewRecipes = ({ token }) => {
       <div className="input">
         <br />
         <br />
-
         <input
           onChange={(e) => {
             setImage(e.target.value);
@@ -83,16 +82,14 @@ const NewRecipes = ({ token }) => {
           placeholder="Description"
           className="rec"
         ></textarea>
-        {/* <br />
         <br />
-        <br /> */}
+        <button className="buttonnew" onClick={createRecipe}>
+          create new recipe
+        </button>
         <br />
-        <button className="buttonnew" onClick={createRecipe}>create new recipe</button>
         <br />
         <br />
-        <p>{paragraph}</p>
-        {/* <br />
-        <br />
+        <p style={{fontSize:"25px", color:"white"}}>{paragraph}</p>
         <br />
         <br />
         <br />
@@ -101,17 +98,6 @@ const NewRecipes = ({ token }) => {
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br /> */}
       </div>
     </>
   );
