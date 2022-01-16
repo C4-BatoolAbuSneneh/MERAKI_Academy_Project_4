@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./AllRecipe.css"
+import "./AllRecipe.css";
+import { Link } from "react-router-dom";
 const AllRecipe = ({ isAdmin }) => {
   const [recipes, setRecipes] = useState([]);
   const [image, setImage] = useState("");
@@ -67,19 +68,17 @@ const AllRecipe = ({ isAdmin }) => {
           <br /> <br />
           <div key={i} className="allpage">
             {" "}
-            <div className="newr">
+            <div className="all1">
               <br /> <br />
-              <img style={{ width: "30%" }} src={ele.image} />
-              <br /> <br />
+              <Link to={`/recipes/all/product/${ele._id}`}>
+                {" "}
+                <img className="image" src={ele.image} />
+              </Link>
+              <br /> 
               <p className="title"> {ele.title}</p>
-              {/* <i class="fab fa-accusoft"></i> */}
-              {/* <i class="glyphicon glyphicon-thumbs-up"></i> */}
-              {/* <i className="far fa-clock"></i> */}
-              {/* <i class="far fa-clock">&#xe424;</i> */}
-              {/* <i style={{fontSize:"80px"}} class='fas fa-bullhorn'>&#xf0a1;</i> */}
               <p className="time"> {ele.time}</p>
-              <p className="ingredient"> Ingredients : {ele.ingredients}</p>
-              <p className="description"> Description: {ele.description}</p>
+              {/* <p className="ingredient"> Ingredients : {ele.ingredients}</p> */}
+              {/* <p className="description"> Description: {ele.description}</p> */}
               <button onClick={() => addToLocalStorge(ele)} className="myfavor">
                 MyFavourite{" "}
               </button>
@@ -87,10 +86,8 @@ const AllRecipe = ({ isAdmin }) => {
               <br />
               {isAdmin ? (
                 <div>
-                  
                   <br />
                   <br />
-
                   <input
                     onChange={(e) => {
                       setTitle(e.target.value);
@@ -152,23 +149,25 @@ const AllRecipe = ({ isAdmin }) => {
     });
   return (
     <>
+      <br />
       {/* <div className="ui search">
         <div className="ui icon input">
+
           <input
             type="text"
             className="prompt"
-            style={{ padding: "5px 200px", fontSize: "16px" }}
+            style={{ padding: "0px 20px", fontSize: "16px", borderRadius:"20px " }}
             placeholder="search...."
           />
           <i className="search icon"></i>
         </div>
       </div>
       <br />
-      <div className="ui called list"></div> */}
+      <div className="ui called list"></div>
 
       <div className="buttonall" onClick={getAllRecipes}>
         {" "}
-      </div>
+      </div> */}
       {myRecipe}
     </>
   );
