@@ -5,6 +5,7 @@ const {
   getRecipesById,
   updateRecipesById,
   deleteRecipeById,
+  getProductById
 } = require("../controllers/recipes");
 const authentication = require("../middleware/authentication");
 const authorization = require("../middleware/authorization");
@@ -16,5 +17,6 @@ recipesRouter.get("/all", authentication, getAllRecipes);
 recipesRouter.get("/search", authentication, getRecipesById);
 recipesRouter.put("/:id", authentication, authorization, updateRecipesById);
 recipesRouter.delete("/:id", authentication, authorization, deleteRecipeById);
+recipesRouter.get("/all/product/:id", authentication, getProductById);
 
 module.exports = recipesRouter;
