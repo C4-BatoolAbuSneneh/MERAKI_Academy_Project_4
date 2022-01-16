@@ -43,11 +43,11 @@
   }
   .all1 {
     display: grid;
-    grid-template-columns: 100%;
+    /* grid-template-columns: 100%; */
     grid-auto-flow: row;
     border: 2px solid black;
-
     padding: 0% 5%;
+
   }
   .ingredient {
     font-size: 25px;

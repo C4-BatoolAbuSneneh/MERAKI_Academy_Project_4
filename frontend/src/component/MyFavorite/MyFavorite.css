@@ -33,6 +33,7 @@
     /* background-color: rgba(98, 214, 20, 0.6); */
     padding: 0% 5%;
     display: grid;
+    /* grid-auto-flow: row; */
     border: 2px solid black;
   }
   .time {
