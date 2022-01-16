@@ -1,0 +1,61 @@
+@media screen and (min-width: 200px), (max-width: 500px) {
+
+.my:hover {
+    color: white;
+    text-decoration-line: underline;
+  }
+ .myfavourite {
+    background-repeat: repeat;
+    background-size: cover; 
+  }
+  .my {
+    text-decoration: none;
+    float: left;
+    /* background-color: green; */
+    display: block;
+    color: rgb(253, 253, 253);
+    font-family: unset;
+    font-size: 17px;
+    padding: 2px 16px;
+    margin: 5px;
+  }
+
+  .myfavor {
+    font-size: 15px;
+    background-color: green;
+    border-radius: 10px;
+    height: 35px;
+    width: 100px;
+    color: white;
+  }
+  .newr {
+    /* background-color: rgba(98, 214, 20, 0.6); */
+    padding: 0% 5%;
+  }
+  .time {
+    font-size: 24px;
+    width: 500px;
+    color: rgb(85, 84, 84);
+  }
+  .title {
+    font-size: 25px;
+    float: right;
+    color: rgb(85, 84, 84);
+    width: 100%;
+   
+  }
+  .ingredient {
+  font-size: 25px;
+  width: 500px;
+  color: rgb(85, 84, 84);
+  width: 80%;
+}
+  .discription {
+    font-size: 30px;
+    float: right;
+    width: 500px;
+    color: rgb(85, 84, 84);
+    width: 100%;
+  }
+  
+}

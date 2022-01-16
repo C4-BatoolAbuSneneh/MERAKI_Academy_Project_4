@@ -1,185 +1,41 @@
 @media screen and (min-width: 200px), (max-width: 500px) {
   .App {
-    background-image: url("https://image.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg");
-    border: 2px solid black;
     padding: 40px;
+    background-color: white;
     background-repeat: repeat;
     background-size: cover;
   }
-  .about {
-    background-color: rgba(0, 0, 0, 0.3);
 
-    text-decoration: none;
-    float: left;
-    display: block;
-    color: rgb(218, 107, 16);
-    font-family: unset;
-    font-size: 20px;
-    padding: 2px 16px;
-    margin: 5px;
-  }
-  
-  .description {
-    font-size: 25px;
-    float: right;
-    width: 500px;
-    color: white;
-    width: 100%;
-  }
-  .rec {
-    height: 30px;
-    width: 28%;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5px;
-    transform: translate(10%, 20%);
-  }
-  .newr {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 0% 5%;
-  }
-  .buttonnew {
-    transform: translate(10%, 60%);
-    font-size: 18px;
-    border-radius: 10px;
-    height: 38px;
-    width: 28%;
-    background-color: rgb(218, 107, 16);
-    color: white;
-  }
-  .time {
-    font-size: 30px;
-    width: 500px;
-    color: white;
-  }
-  .allrecipe {
-    background-color: rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    float: left;
-    grid-template-columns: unset;
-    /* display: block; */
-    color: rgb(218, 107, 16);
-    font-family: unset;
-    font-size: 20px;
-    padding: 2px 16px;
-    margin: 5px;
-  }
-  .title {
-    font-size: 25px;
-    float: right;
-    width: 500px;
-    color: white;
-    width: 100%;
-  }
-  .about:hover {
-    color: rgb(218, 107, 16);
-    text-decoration-line: underline;
-  }
- 
-  .allrecipe:hover {
-    color: rgb(218, 107, 16);
-    text-decoration-line: underline;
-  }
-  .my:hover {
-    color: rgb(218, 107, 16);
-    text-decoration-line: underline;
-  }
+
   .logout:hover {
-    color: rgb(218, 107, 16);
-
+    color: white;
     text-decoration-line: underline;
   }
   .logout {
-    background-color: rgba(0, 0, 0, 0.3);
-
+    width: 100%;
+    /* background-color: rgb(6, 235, 6); */
     text-decoration: none;
-    float: left;
-    display: block;
-    color: rgb(218, 107, 16);
+    /* display: none; */
+    color: rgb(255, 255, 255);
     font-family: unset;
-    font-size: 20px;
+    font-size: 17px;
     padding: 2px 16px;
     margin: 5px;
   }
-  .recipe {
-    background-color: rgba(0, 0, 0, 0.3);
-    text-decoration: none;
+  .logo {
+    height: 100px;
+    width: 30%;
+    margin-left: 50%;
+    /* background-color: rgb(127, 204, 49); */
+  }
+  .logo1 {
+    /* logo */
+    padding: 15px 0 0;
     float: left;
-    display: block;
-    color: rgb(218, 107, 16);
-    font-family: unset;
-    font-size: 20px;
-    padding: 2px 16px;
-    margin: 5px;
+    height: -30%;
+    width: 15%;
   }
-  .tit {
-    /* height: 40%; */
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px green solid;
-    width: 13%;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    /* border-radius: 5px; */
-    transform: translate(8%, -70%);
-  }
-  .ingred {
-    width: 13%;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5px;
-    transform: translate(8%, -120%);
-  }
-  .timee {
-    width: 13%;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5px;
-    transform: translate(120%, -250%);
-  }
-  .describ {
-    width: 13%;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5px;
-    transform: translate(120%, -270%);
-  }
-  .update {
-    transform: translate(5%, -340%);
-    font-size: 15px;
-    border-radius: 10px;
-    height: 38px;
-    width: 14%;
-    color: white;
-    background-color: rgb(218, 107, 16);
-  }
-  .delete {
-    transform: translate(110%, -495%);
-    font-size: 15px;
-    border-radius: 10px;
-    height: 38px;
-    width: 14%;
-    color: white;
-    background-color: rgb(218, 107, 16);
-  }
-  .recipe:hover {
-    color: rgb(218, 107, 16);
-
-    text-decoration-line: underline;
-  }
-  .buttonall {
-    cursor: pointer;
-    border-top: black;
-    height: 25px;
-    width: 120px;
-  }
-  .myfavor {
-    font-size: 15px;
-    border-radius: 10px;
-    height: 35px;
-    width: 100px;
-    color: white;
-    background-color: rgb(218, 107, 16);
+  .img1 {
+    padding: 0% 0%;
   }
 }

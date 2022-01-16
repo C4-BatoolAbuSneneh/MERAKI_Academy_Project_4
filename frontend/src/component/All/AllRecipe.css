@@ -1,26 +1,130 @@
+@media screen and (min-width: 200px), (max-width: 500px) {
+
 .allpage {
-    background-repeat: repeat;
-    background-size: cover;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.allrecipe {
+  /* background-color: green; */
+  text-decoration: none;
+  margin: 5px;
+  font-family: unset;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  text-align: center;
+  padding: 2px 16px;
+}
+
+.time {
+  font-size: 30px;
+  width: 500px;
+  color: rgb(85, 84, 84);
+}
+.title {
+  font-size: 25px;
+  float: right;
+  width: 500px;
+  color: rgb(85, 84, 84);
+  width: 100%;
+}
+.description {
+  font-size: 25px;
+  float: right;
+  width: 500px;
+  color: rgb(85, 84, 84);
+  width: 100%;
+}
+
+.allrecipe:hover {
+  color: white;
+  text-decoration-line: underline;
+}
+.all1 {
+  display: grid;
+
+  padding: 0% 5%;
+}
+.ingredient {
+  font-size: 25px;
+  width: 500px;
+  color: rgb(85, 84, 84);
+  width: 80%;
+}
+.delete {
+  transform: translate(110%, -400%);
+  font-size: 15px;
+  border-radius: 10px;
+  height: 38px;
+  width: 20%;
+  color: white;
+  background-color: green;
+}
+.timee {
+  height: 30px;
+  width: 20%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px rgb(36, 35, 35) solid;
+  color: black;
+  transform: translate(110%, 20%);
+  border-radius: 5px;
+}
+.update {
+  transform: translate(0%, -250%);
+  font-size: 15px;
+  border-radius: 10px;
+  height: 38px;
+  width: 20%;
+  color: white;
+  background-color: green;
+}
+  .tit {
+    height: 30px;
+    width: 20%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px rgb(36, 35, 35) solid;
+    color: black;
+    transform: translate(110%, 20%);
+    border-radius: 5px;
+  } 
+  .ingred {
+    height: 30px;
+    width: 20%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px rgb(36, 35, 35) solid;
+    color: black;
+    transform: translate(0%, -320%);
+    border-radius: 5px;
   }
 
-  .myfavourite {
-    background-repeat: repeat;
-    background-size: cover;
+  .describ {
+    height: 30px;
+    width: 20%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px rgb(36, 35, 35) solid;
+    color: black;
+    transform: translate(0%, -330%);
+    border-radius: 5px;
   }
-  .my {
-    background-color: rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    float: left;
-    display: block;
-    color: rgb(218, 107, 16);
-    font-family: unset;
-    font-size: 20px;
-    padding: 2px 16px;
-    margin: 5px;
-  }
-  .ingredient {
-    font-size: 25px;
-    width: 500px;
-    color: white;
-    width: 80%;
-  }
+.prompt{
+  width: 30%;
+  transform: translate(15%, -10%);
+
+}
+  /* .buttonall {
+    cursor: pointer;
+    border-top: black;
+    height: 25px;
+    width: 120px;
+  } */
+
+}

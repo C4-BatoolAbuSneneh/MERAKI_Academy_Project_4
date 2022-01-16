@@ -1,11 +1,12 @@
-.loginbutton {
+@media screen and (min-width: 200px), (max-width: 500px) {
+  .loginbutton {
     transform: translate(110%, 20%);
     font-size: 18px;
     border-radius: 10px;
     height: 38px;
     width: 40%;
     color: white;
-    background-color: rgb(218, 107, 16);
+    background-color: rgb(127, 204, 49);
   }
   .loginpage {
     align-self: center;
@@ -13,18 +14,17 @@
     background-size: cover;
   }
   .login:hover {
-    color: rgb(218, 107, 16);
+    color: white;
     text-decoration-line: underline;
   }
 
   .login {
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: green; */
     text-decoration: none;
     float: left;
-    display: block;
-    color: rgb(218, 107, 16);
+    color: rgb(255, 255, 255);
     font-family: unset;
-    font-size: 20px;
+    font-size: 17px;
     padding: 2px 16px;
     margin: 5px;
   }
@@ -38,9 +38,10 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 2px white solid;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    border-bottom: 2px rgb(36, 35, 35) solid;
+    /* background-color: rgb(0, 0, 0,0.2); */
+    color: black;
     transform: translate(110%, 20%);
     border-radius: 5px;
   }
+}
