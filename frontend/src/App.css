@@ -7,7 +7,6 @@
     display: grid;
   }
 
-
   .logout:hover {
     color: white;
     text-decoration-line: underline;
@@ -25,20 +24,20 @@
   }
   .logo {
     /* height: 100px; */
-    width: 30% ;
+    width: 30%;
     float: none;
     display: inline-block;
-    margin-left: 50% ;
+    margin-left: 50%;
   }
-  .image{
-     width: 30%;
-     /* transform: translate(-7%, -25%); */
-     /* padding: 0% 0%; */
-     /* margin: 0%; */
-  } 
+  .image {
+    width: 30%;
+    /* transform: translate(-7%, -25%); */
+    /* padding: 0% 0%; */
+    /* margin: 0%; */
+  }
   .logo1 {
     /* logo */
-   display: block;
+    display: block;
     padding: 15px 0 0;
     float: left;
     /* height: -30%; */

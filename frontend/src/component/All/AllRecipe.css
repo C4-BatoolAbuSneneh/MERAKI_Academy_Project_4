@@ -16,7 +16,19 @@
     text-align: center;
     padding: 2px 16px;
   }
-
+.add1{
+  font-size: 14px;
+  background-color: rgb(127, 204, 49);
+  border-radius: 10px;
+  height: 35px;
+  color: white;
+}
+.input{
+  height: 30px;
+  border-bottom: 2px rgb(36, 35, 35) solid;
+  color: black;
+  border-radius: 10px;
+}
   .time {
     font-size: 30px;
     width: 500px;
@@ -25,18 +37,9 @@
   .title {
     font-size: 25px;
     float: right;
-    /* width: 500px; */
     color: rgb(85, 84, 84);
     width: 100%;
   }
-  /* .description {
-    font-size: 25px;
-    float: right;
-    width: 500px;
-    color: rgb(85, 84, 84);
-    width: 100%;
-  } */
-
   .allrecipe:hover {
     color: white;
     text-decoration-line: underline;
@@ -49,12 +52,6 @@
     padding: 0% 5%;
 
   }
-  /* .ingredient {
-    font-size: 25px;
-    width: 500px;
-    color: rgb(85, 84, 84);
-    width: 80%;
-  } */
   .delete {
     transform: translate(110%, -400%);
     font-size: 15px;
@@ -106,7 +103,13 @@
     transform: translate(0%, -320%);
     border-radius: 5px;
   }
-
+.add{
+  font-size: 15px;
+    background-color: rgb(127, 204, 49);
+    border-radius: 10px;
+    height: 35px;
+    color: white;
+  }
   .describ {
     height: 30px;
     width: 20%;
