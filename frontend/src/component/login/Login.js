@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Login.css"
+import "./Login.css";
+import { Link, useNavigate } from "react-router-dom";
+
 const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
-  const [email, setEmail] = useState("");
+    const navigate = useNavigate();
+const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [paragraph, setParagraph] = useState("");
   const [status, setStatus] = useState("");
   return (
     <>
-     <br /> <br />
+      <br /> <br />
       <div
         className="loginpage"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
       >
         <br />
         <div>
@@ -19,7 +21,7 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
             style={{
               width: "90%",
               textAlign: "center",
-              color: "white",
+              color: "grey",
               fontFamily: "initial",
               fontStyle: "italic",
             }}
@@ -30,7 +32,7 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
             style={{
               width: "90%",
               textAlign: "center",
-              color: "white",
+              color: "grey",
               fontFamily: "sans-serif",
             }}
           >
@@ -68,8 +70,8 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
                 .then((result) => {
                   setIsLoggedIn(true);
                   setToken(result.data.token);
+                  navigate("./all")
                   localStorage.setItem("token", result.data.token);
-                  setParagraph("Your login is successful");
                   setIsAdmin(result.data.role === "ADMIN");
                 })
                 .catch((err) => {
@@ -87,9 +89,9 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
         <br />
         <p
           style={{
-            color: "white",
+            color: "rgb(127, 204, 49)",
             fontSize: "25px",
-            fontFamily: "monospace",
+            fontFamily: "verdana",
             padding: "30px",
             width: "87%",
             textAlign: "center",
