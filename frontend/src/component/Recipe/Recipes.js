@@ -28,7 +28,6 @@ const NewRecipes = ({ token }) => {
   return (
     <>
       <br />
-      <br />
       <div className="input">
         <br />
         <br />
@@ -37,7 +36,7 @@ const NewRecipes = ({ token }) => {
             setImage(e.target.value);
           }}
           type="text"
-          placeholder="click image"
+          placeholder="Image"
           className="rec"
         ></input>
         <br />
@@ -90,14 +89,6 @@ const NewRecipes = ({ token }) => {
         <br />
         <br />
         <p style={{fontSize:"25px", color:"white"}}>{paragraph}</p>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       </div>
     </>
   );

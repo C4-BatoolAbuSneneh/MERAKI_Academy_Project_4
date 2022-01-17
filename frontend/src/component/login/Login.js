@@ -98,7 +98,6 @@ const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
           {paragraph}
         </p>
       </div>
-      <br /> <br /> <br />
     </>
   );
 };

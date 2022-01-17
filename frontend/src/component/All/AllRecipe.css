@@ -48,8 +48,8 @@
     /* display: grid; */
     /* grid-template-columns: 100%; */
     /* grid-auto-flow: row; */
-    border: 2px solid black;
-    padding: 0% 5%;
+    /* border: 2px solid black; */
+    padding: 0% 3%;
 
   }
   .delete {
@@ -58,8 +58,8 @@
     border-radius: 10px;
     height: 38px;
     width: 20%;
-    color: white;
-    background-color: green;
+    color: #ffffff;
+    background-color: rgb(127, 204, 49);
   }
   .timee {
     height: 30px;
@@ -79,7 +79,7 @@
     height: 38px;
     width: 20%;
     color: white;
-    background-color: green;
+    background-color: rgb(127, 204, 49);
   }
   .tit {
     height: 30px;

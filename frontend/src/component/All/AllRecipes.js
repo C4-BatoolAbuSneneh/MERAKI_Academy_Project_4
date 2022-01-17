@@ -84,13 +84,21 @@ const AllRecipe = ({ isAdmin }) => {
       return (
         <>
           <br />
-          <div key={i} className="allpage">
+          <div
+            key={i}
+            className="allpage"
+            style={{ border: "2px solid black" }}
+          >
             {" "}
             <div className="all1">
               <br /> <br />
               <Link onClick={Product} to={`/recipes/all/product/${ele._id}`}>
                 {" "}
-                <img className="image" src={ele.image} />
+                <img
+                  style={{ width: "20%" }}
+                  className="image"
+                  src={ele.image}
+                />
               </Link>
               <br />
               <br />
@@ -189,7 +197,6 @@ const AllRecipe = ({ isAdmin }) => {
   return (
     <>
       <br />
-   
       {myRecipe}
     </>
   );
