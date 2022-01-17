@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./AllRecipe.css";
+import Product from "../Product/Product";
 import { Link } from "react-router-dom";
 const AllRecipe = ({ isAdmin }) => {
   const [recipes, setRecipes] = useState([]);
@@ -9,10 +10,9 @@ const AllRecipe = ({ isAdmin }) => {
   const [ingredients, setIngredients] = useState([]);
   const [description, setDescription] = useState("");
   const [time, setTime] = useState("");
-
+  const [comment, setComment] = useState("");
   const addToLocalStorge = (ele) => {
     const fav = JSON.parse(localStorage.getItem("favourite")) || [];
-
     fav.push(ele);
     localStorage.setItem("favourite", JSON.stringify(fav));
   };
@@ -60,25 +60,64 @@ const AllRecipe = ({ isAdmin }) => {
         console.log(err);
       });
   };
+  const newComment = (id) => {
+    axios
+      .post(
+        `http://localhost:5000/recipes/${id}/comments`,
+        { comment },
+        {
+          headers: { Authorization: `Bearer ${tokenn}` },
+        }
+      )
+      .then((result) => {
+        setComment(result.data.comments);
+        getAllRecipes();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const myRecipe =
     recipes &&
     recipes.map((ele, i) => {
       return (
         <>
-          <br /> <br />
+          <br />
           <div key={i} className="allpage">
             {" "}
             <div className="all1">
               <br /> <br />
-              <Link to={`/recipes/all/product/${ele._id}`}>
+              <Link onClick={Product} to={`/recipes/all/product/${ele._id}`}>
                 {" "}
                 <img className="image" src={ele.image} />
               </Link>
-              <br /> 
+              <br />
+              <br />
               <p className="title"> {ele.title}</p>
               <p className="time"> {ele.time}</p>
-              {/* <p className="ingredient"> Ingredients : {ele.ingredients}</p> */}
-              {/* <p className="description"> Description: {ele.description}</p> */}
+              <p>
+                {ele.comments &&
+                  ele.comments.map((ele) => {
+                    return (
+                      <>
+                        <li className="comment">{ele.comment}</li>
+                      </>
+                    );
+                  })}
+              </p>
+              <input
+                onChange={(e) => {
+                  setComment(e.target.value);
+                }}
+                placeholder="comment..."
+                className="input"
+              ></input>
+              <br /> <br />
+              <button className="add1" onClick={() => newComment(ele._id)}>
+                add comment
+              </button>
+              <br /> <br />
               <button onClick={() => addToLocalStorge(ele)} className="myfavor">
                 MyFavourite{" "}
               </button>
@@ -150,24 +189,7 @@ const AllRecipe = ({ isAdmin }) => {
   return (
     <>
       <br />
-      {/* <div className="ui search">
-        <div className="ui icon input">
-
-          <input
-            type="text"
-            className="prompt"
-            style={{ padding: "0px 20px", fontSize: "16px", borderRadius:"20px " }}
-            placeholder="search...."
-          />
-          <i className="search icon"></i>
-        </div>
-      </div>
-      <br />
-      <div className="ui called list"></div>
-
-      <div className="buttonall" onClick={getAllRecipes}>
-        {" "}
-      </div> */}
+   
       {myRecipe}
     </>
   );
