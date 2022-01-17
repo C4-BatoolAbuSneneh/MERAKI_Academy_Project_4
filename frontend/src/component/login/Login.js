@@ -4,17 +4,15 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = ({ setToken, setIsLoggedIn, setIsAdmin }) => {
-    const navigate = useNavigate();
-const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [paragraph, setParagraph] = useState("");
   const [status, setStatus] = useState("");
   return (
     <>
       <br /> <br />
-      <div
-        className="loginpage"
-      >
+      <div className="loginpage">
         <br />
         <div>
           <h1
@@ -70,7 +68,7 @@ const [email, setEmail] = useState("");
                 .then((result) => {
                   setIsLoggedIn(true);
                   setToken(result.data.token);
-                  navigate("./all")
+                  navigate("./all");
                   localStorage.setItem("token", result.data.token);
                   setIsAdmin(result.data.role === "ADMIN");
                 })

@@ -3,10 +3,11 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./component/Navigation";
 import Register from "./component/Register/Register";
-import Login from "./component/login/Login"
-import Recipes from "./component/Recipes";
+import Login from "./component/login/Login";
+import Recipes from "./component/Recipe/Recipes";
 import AllRecipe from "./component/All/AllRecipes";
-import MyFavourite from "./component/MyFavourite";
+import MyFavourite from "./component/MyFavorite/MyFavourite";
+import Product from "./component/Product/Product";
 function App() {
   let [token, setToken] = useState("");
   token = localStorage.getItem("token");
@@ -43,6 +44,10 @@ function App() {
           element={<AllRecipe token={token} isAdmin={isAdmin} />}
         />
         <Route path="/my" element={<MyFavourite token={token} />} />
+        <Route
+          path="/recipes/all/product/:id"
+          element={<Product token={token} />}
+        />
       </Routes>
     </div>
   );

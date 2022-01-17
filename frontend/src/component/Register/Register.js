@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Register.css"
+import "./Register.css";
 const Register = () => {
   const [firstName, setFirstName] = useState(" ");
   const [lastName, setLastName] = useState("");
@@ -10,10 +10,7 @@ const Register = () => {
   return (
     <>
       <br /> <br />
-      <div
-        className="registerpage"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
-      >
+      <div className="registerpage">
         <br />
         <div>
           <h1
@@ -21,7 +18,7 @@ const Register = () => {
               height: "1.3em",
               width: "90%",
               textAlign: "center",
-              color: "white",
+              color: "grey",
               fontFamily: "initial",
               fontStyle: "italic",
             }}
@@ -32,7 +29,7 @@ const Register = () => {
             style={{
               width: "90%",
               textAlign: "center",
-              color: "white",
+              color: "grey",
               fontFamily: "sans-serif",
             }}
           >
@@ -102,9 +99,9 @@ const Register = () => {
         </button>
         <p
           style={{
-            color: "white",
+            color: "rgb(127, 204, 49)",
+            fontFamily: "verdana",
             fontSize: "25px",
-            fontFamily: "monospace",
             padding: "30px",
             width: "87%",
             textAlign: "center",

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import "./Recipe.css"
 const NewRecipes = ({ token }) => {
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");

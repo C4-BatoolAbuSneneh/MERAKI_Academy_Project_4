@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 
 const Product = ({ token }) => {
   const { id } = useParams();
+  const [comment, setComment] = useState("");
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
