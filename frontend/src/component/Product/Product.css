@@ -1,0 +1,31 @@
+.product{
+    border: 2px solid black;
+    padding: 5% 5%;
+    display: grid;
+
+}
+/* .time {
+    font-size: 30px;
+    width: 500px;
+    color: rgb(85, 84, 84);
+  }
+  .title {
+    font-size: 30px;
+    float: right;
+    color: rgb(85, 84, 84);
+    width: 100%;
+   
+  }
+  .ingredient {
+  font-size: 25px;
+  width: 500px;
+  color: rgb(85, 84, 84);
+  width: 80%;
+}
+  .discription {
+    font-size: 25px;
+    float: right;
+    width: 500px;
+    color: rgb(85, 84, 84);
+    width: 100%;
+  } */

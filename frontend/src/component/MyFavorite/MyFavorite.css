@@ -39,26 +39,26 @@
   .time {
     font-size: 24px;
     width: 500px;
-    color: rgb(85, 84, 84);
+    color: black;
   }
   .title {
     font-size: 25px;
     float: right;
-    color: rgb(85, 84, 84);
+    color: black;
     width: 100%;
    
   }
   .ingredient {
   font-size: 25px;
   width: 500px;
-  color: rgb(85, 84, 84);
+  color: black;
   width: 80%;
 }
   .discription {
     font-size: 25px;
     float: right;
     width: 500px;
-    color: rgb(85, 84, 84);
+    color: black;
     width: 100%;
   }
   
