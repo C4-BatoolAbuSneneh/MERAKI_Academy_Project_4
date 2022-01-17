@@ -3,7 +3,7 @@ const recipeModel = require("../database/models/recipes");
 
 const createNewComment = (req, res) => {
   const { comment } = req.body;
-  const recipeId = req.params.recipe_id;
+  const recipeId = req.params.id;
   const commenter = req.token.userId;
   const newComment = new commentsModel({
     comment,
@@ -15,7 +15,7 @@ const createNewComment = (req, res) => {
       recipeModel
         .findByIdAndUpdate(
           { _id: recipeId },
-          { $push: { comment: result._id } }
+          { $push: { comments: result._id } }
         )
         .then(() => {
           res.status(201).json({

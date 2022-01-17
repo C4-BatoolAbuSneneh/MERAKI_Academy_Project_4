@@ -27,13 +27,17 @@ const createNewRecipe = (req, res) => {
     });
 };
 const getAllRecipes = (req, res) => {
+  const userId = req.token.userId
   recipesModel
     .find({})
+    .populate("comments")
     .then((recipes) => {
       res.status(200).json({
         success: true,
         message: `All the recipes`,
+        userId: userId,
         recipes: recipes,
+        comment: recipes.comment
       });
     })
     .catch((err) => {
@@ -121,7 +125,7 @@ const getProductById = (req, res) => {
     recipesModel
     .findById(id)
     .then((result) => {
-      res.status(404).json({
+      res.status(200).json({
         success: true,
         message: `the recipe ${id}`,
         result: result
