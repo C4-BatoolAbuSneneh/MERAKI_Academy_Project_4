@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./AllRecipe.css";
 import Product from "../Product/Product";
+import { BsFillAlarmFill, BsHeart } from "react-icons/bs";
+import { AiFillEdit, AiFillDelete, AiOutlinePlus } from "react-icons/ai";
 import { Link } from "react-router-dom";
-const AllRecipe = ({ isAdmin }) => {
+const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
   const [recipes, setRecipes] = useState([]);
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
@@ -84,18 +86,14 @@ const AllRecipe = ({ isAdmin }) => {
       return (
         <>
           <br />
-          <div
-            key={i}
-            className="allpage"
-            style={{ border: "2px solid black" }}
-          >
+          <div key={i} className="allpage">
             {" "}
             <div className="all1">
-              <br /> <br />
+              {/* <br /> <br /> */}
               <Link onClick={Product} to={`/recipes/all/product/${ele._id}`}>
                 {" "}
                 <img
-                  style={{ width: "20%" }}
+                  style={{ width: "100%", height: "90%" }}
                   className="image"
                   src={ele.image}
                 />
@@ -103,7 +101,11 @@ const AllRecipe = ({ isAdmin }) => {
               <br />
               <br />
               <p className="title"> {ele.title}</p>
-              <p className="time"> {ele.time}</p>
+              <p className="time">
+                {" "}
+                <BsFillAlarmFill style={{ height: "4%", width: "4%" }} />{" "}
+                {ele.time}{" "}
+              </p>
               <p>
                 {ele.comments &&
                   ele.comments.map((ele) => {
@@ -122,15 +124,29 @@ const AllRecipe = ({ isAdmin }) => {
                 className="input"
               ></input>
               <br /> <br />
-              <button className="add1" onClick={() => newComment(ele._id)}>
-                add comment
-              </button>
               <br /> <br />
-              <button onClick={() => addToLocalStorge(ele)} className="myfavor">
-                MyFavourite{" "}
+              <button onClick={() => addToLocalStorge(ele)} className="heart">
+                <BsHeart style={{ color: "black" }} />{" "}
               </button>
-              <br />
-              <br />
+              {isLogedIn || token ? (
+                <>
+                  <br /> <br />
+                  <button className="add1" onClick={() => newComment(ele._id)}>
+                    <AiOutlinePlus style={{ color: "black" }} />{" "}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button
+                    disabled
+                    className="add1"
+                    onClick={() => newComment(ele._id)}
+                  >
+                    <AiOutlinePlus style={{ color: "black" }} />{" "}
+                  </button>
+                </>
+              )}
+              {/* <br />  <br /> */}
               {isAdmin ? (
                 <div>
                   <br />
@@ -175,7 +191,7 @@ const AllRecipe = ({ isAdmin }) => {
                     className="update"
                     onClick={() => updateRecipesById(ele._id)}
                   >
-                    Update
+                    <AiFillEdit />
                   </button>
                   <br />
                   <br />
@@ -183,7 +199,7 @@ const AllRecipe = ({ isAdmin }) => {
                     className="delete"
                     onClick={() => deleteRecipesById(ele._id)}
                   >
-                    Delete
+                    <AiFillDelete />
                   </button>
                 </div>
               ) : (
