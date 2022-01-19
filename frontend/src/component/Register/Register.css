@@ -19,15 +19,24 @@
   }
   
   .register {
-    /* background-color: green; */
+    border-left:3px solid green;
+    height: 30px;
     text-decoration: none;
+    float: right;
+    color: rgb(255, 255, 255);
+    font-family: unset;
+    font-size: 17px;
+    padding: 2px 16px;
+    margin: 5px;
+
+    /* text-decoration: none;
     margin: 5px;
     font-family: unset;
     display: inline-block;
     color: rgb(255, 255, 255);
     font-size: 17px;
     text-align: center;
-    padding: 2px 16px;
+    padding: 2px 16px; */
   }
   .register:hover {
     color: white;

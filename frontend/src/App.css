@@ -1,6 +1,6 @@
 @media screen and (min-width: 200px), (max-width: 500px) {
   .App {
-    padding: 40px;
+    padding: 40px ;
     background-color: white;
     background-repeat: repeat;
     background-size: cover;
@@ -12,35 +12,33 @@
     text-decoration-line: underline;
   }
   .logout {
-    width: 100%;
-    /* background-color: rgb(6, 235, 6); */
+    border-left:3px solid green;
     text-decoration: none;
-    /* display: none; */
+    display: block;
     color: rgb(255, 255, 255);
     font-family: unset;
     font-size: 17px;
     padding: 2px 16px;
     margin: 5px;
+    float: right;
   }
   .logo {
-    /* height: 100px; */
     width: 30%;
+
     float: none;
     display: inline-block;
     margin-left: 50%;
   }
+
   .image {
     width: 30%;
-    /* transform: translate(-7%, -25%); */
-    /* padding: 0% 0%; */
-    /* margin: 0%; */
   }
   .logo1 {
     /* logo */
+    transform: translate(15%,0%);
     display: block;
     padding: 15px 0 0;
     float: left;
-    /* height: -30%; */
     width: 15% 10%;
   }
   .img1 {

@@ -1,18 +1,28 @@
 @media screen and (min-width: 200px), (max-width: 500px) {
-
-.my:hover {
+  .my:hover {
     color: white;
     text-decoration-line: underline;
   }
- .myfavourite {
+  .icondelete {
+    color: black;
+  }
+  .myfavourite {
     background-repeat: repeat;
-    background-size: cover; 
-    
+    background-size: cover;
+    /* width: 35%; */
+    height: 0%;
+    width: 10% 0%;
+    /* border: 2px solid rgb(93, 102, 93); */
+  }
+  .mypage {
+    background-repeat: repeat;
+    background-size: cover;
   }
   .my {
+    border-right: 3px solid green;
+    height: 30px;
     text-decoration: none;
     float: left;
-    /* background-color: green; */
     display: block;
     color: rgb(253, 253, 253);
     font-family: unset;
@@ -20,46 +30,46 @@
     padding: 2px 16px;
     margin: 5px;
   }
-
+  .image2 {
+    width: 40%;
+    border-radius: 5%;
+    transform: translate(130%, 5%);
+  }
   .myfavor {
-    font-size: 15px;
+    font-size: 27px;
     background-color: rgb(127, 204, 49);
     border-radius: 10px;
     height: 35px;
-    width: 100px;
+    width: 10%;
+    transform: translate(30%,-350px);
     color: white;
   }
-  .newr {
-    /* background-color: rgba(98, 214, 20, 0.6); */
-    padding: 0% 5%;
-    display: grid;
-    /* grid-auto-flow: row; */
-    border: 2px solid black;
-  }
   .time {
-    font-size: 24px;
-    width: 500px;
+    transform: translate(13em, -14em);
+    font-size: 27px;
     color: black;
   }
   .title {
-    font-size: 25px;
-    float: right;
+    transform: translate(2em, -11em);
+    font-size: 30px;
     color: black;
-    width: 100%;
-   
   }
   .ingredient {
-  font-size: 25px;
-  width: 500px;
-  color: black;
-  width: 80%;
-}
-  .discription {
-    font-size: 25px;
-    float: right;
-    width: 500px;
+    transform: translate(2em,-19em);
+    font-size: 20px;
+    width: 46%;
     color: black;
-    width: 100%;
   }
-  
+  .discription {
+    transform: translate(2em,-18em);
+    font-size: 20px;
+    /* float: right; */
+    width: 46%;
+    color: black;
+  }
+.newr{
+  width: 100%;
+  height: 450px;
+}
+
 }
