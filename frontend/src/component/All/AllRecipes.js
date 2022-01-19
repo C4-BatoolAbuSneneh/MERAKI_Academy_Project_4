@@ -1,14 +1,16 @@
+import ReactStars from "react-rating-stars-component";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./AllRecipe.css";
 import Product from "../Product/Product";
 import { BsFillAlarmFill, BsHeart } from "react-icons/bs";
 import { AiFillEdit, AiFillDelete, AiOutlinePlus } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
   const [recipes, setRecipes] = useState([]);
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
+  const navigate = useNavigate();
   const [ingredients, setIngredients] = useState([]);
   const [description, setDescription] = useState("");
   const [time, setTime] = useState("");
@@ -34,6 +36,9 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
   useEffect(() => {
     getAllRecipes();
   }, []);
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  };
   const deleteRecipesById = (id) => {
     axios
       .delete(`http://localhost:5000/recipes/${id}`, {
@@ -48,18 +53,20 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
       });
   };
   const updateRecipesById = (id) => {
+    console.log(title);
     axios
       .put(
         `http://localhost:5000/recipes/${id}`,
-        { image, title, ingredients, description, time },
+        { title, description, ingredients },
         { headers: { Authorization: `Bearer ${tokenn}` } }
       )
       .then((result) => {
+        console.log(result.data);
         setRecipes(result.data.recipes);
         getAllRecipes();
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response);
       });
   };
   const newComment = (id) => {
@@ -88,45 +95,62 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
           <br />
           <div key={i} className="allpage">
             {" "}
-            <div className="all1">
+            <div className="all2">
               {/* <br /> <br /> */}
               <Link onClick={Product} to={`/recipes/all/product/${ele._id}`}>
                 {" "}
-                <img
-                  style={{ width: "100%", height: "90%" }}
-                  className="image"
-                  src={ele.image}
-                />
+                <img className="image" src={ele.image} />
               </Link>
-              <br />
-              <br />
-              <p className="title"> {ele.title}</p>
-              <p className="time">
+              {/* <br />
+              <br /> */}
+              <p className="title2"> {ele.title}</p>
+              <p className="time2">
                 {" "}
-                <BsFillAlarmFill style={{ height: "4%", width: "4%" }} />{" "}
+                <BsFillAlarmFill
+                //  style={{ height: "4%", width: "4%" }}
+                />{" "}
                 {ele.time}{" "}
               </p>
               <p>
                 {ele.comments &&
-                  ele.comments.map((ele) => {
+                  ele.comments.map((ele, i) => {
                     return (
                       <>
-                        <li className="comment">{ele.comment}</li>
+                        <li key={i} className="comment">
+                          {ele.comment}
+                        </li>
                       </>
                     );
                   })}
               </p>
+              <div className="stars">
+              <ReactStars
+          // classNames="stars"
+            count={5}
+            onChange={ratingChanged}
+            size={24}
+            isHalf={true}
+            // emptyIcon={<i className="far fa=star"></i>}
+            // halfIcon={<i className="fa fa-star-half-alt"></i>}
+            // filledIcon={<i className="fa fa-star"></i>}
+            activeColor="#ffd700"
+          />
+          </div>
               <input
                 onChange={(e) => {
                   setComment(e.target.value);
                 }}
                 placeholder="comment..."
-                className="input"
+                className="input1"
               ></input>
               <br /> <br />
               <br /> <br />
               <button onClick={() => addToLocalStorge(ele)} className="heart">
-                <BsHeart style={{ color: "black" }} />{" "}
+                <BsHeart
+                  style={{
+                    color: "black",}}
+                  // className="hh"
+                />{" "}
               </button>
               {isLogedIn || token ? (
                 <>
@@ -144,11 +168,12 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
                   >
                     <AiOutlinePlus style={{ color: "black" }} />{" "}
                   </button>
+                  {/* <p>{"please login "}</p>
+                  {navigate("/login")} */}
                 </>
               )}
-              {/* <br />  <br /> */}
               {isAdmin ? (
-                <div>
+                <>
                   <br />
                   <br />
                   <input
@@ -196,12 +221,12 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
                   <br />
                   <br />
                   <button
-                    className="delete"
+                    className="delete2"
                     onClick={() => deleteRecipesById(ele._id)}
                   >
                     <AiFillDelete />
                   </button>
-                </div>
+                </>
               ) : (
                 <></>
               )}
@@ -212,6 +237,16 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
     });
   return (
     <>
+      {/* <ReactStars
+            count={5}
+            onChange={ratingChanged}
+            size={24}
+            isHalf={true}
+            emptyIcon={<i className="far fa=star"></i>}
+            halfIcon={<i className="fa fa-star-half-alt"></i>}
+            filledIcon={<i className="fa fa-star"></i>}
+            activeColor="#ffd700"
+          /> */}
       <br />
       {myRecipe}
     </>
