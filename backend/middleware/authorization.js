@@ -1,5 +1,6 @@
 const authorization = (req, res, next) => {
   if (req.token.role === "ADMIN") {
+    // console.log(req.token.role);
     next();
   } else {
     res.status(403).json({

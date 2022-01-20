@@ -27,7 +27,6 @@ const createNewRecipe = (req, res) => {
     });
 };
 const getAllRecipes = (req, res) => {
-  const userId = req.token.userId
   recipesModel
     .find({})
     .populate("comments")
@@ -35,7 +34,6 @@ const getAllRecipes = (req, res) => {
       res.status(200).json({
         success: true,
         message: `All the recipes`,
-        userId: userId,
         recipes: recipes,
         comment: recipes.comment
       });
@@ -94,6 +92,7 @@ const updateRecipesById = (req, res) => {
       res.status(500).json({
         success: false,
         message: `Server Error`,
+        err:err
       });
     });
 };
