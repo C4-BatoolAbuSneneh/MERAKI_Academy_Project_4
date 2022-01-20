@@ -4,12 +4,14 @@
     background-size: cover;
   }
   .stars {
-    transform: translate(14em, -34em);
+    display: block;
+    transform: translate(4em, -25em);
   }
   .heart:hover {
-    background-color: rgb(48, 185, 7);
-    border-bottom: black;
-  }
+    border-bottom: 2px solid rgb(10, 10, 10);
+    border-top: 2px solid rgb(10, 10, 10);
+    border-right: 2px solid rgb(10, 10, 10);
+    border-left: 2px solid rgb(10, 10, 10);  }
   .heart {
     transform: translate(30em, -27.5em);
     font-size: 15px;
@@ -39,8 +41,10 @@
     padding: 2px 16px;
   }
   .add1:hover{
-    background-color: rgb(48, 185, 7);
-    border-bottom: black;
+    border-bottom: 2px solid rgb(10, 10, 10);
+    border-top: 2px solid rgb(10, 10, 10);
+    border-right: 2px solid rgb(10, 10, 10);
+    border-left: 2px solid rgb(10, 10, 10);
   }
   .add1 {
     border-right: none;
@@ -71,12 +75,6 @@
     width: 40%;
     border-radius: 5%;
     transform: translate(130%, 5%);
-    /* width: 44%; */
-    /* height: 20%; */
-    /* display: block; */
-    /* border-radius: 5%; */
-    /* float: left; */
-    /* transform: translate(200%, 100%); */
   }
   .comment {
     transform: translate(2.5em, -15em);
@@ -87,45 +85,49 @@
     transform: translate(2em, -11em);
     font-size: 30px;
     color: black;
-    /* font-size: 30px;
-    color: black; */
   }
 
   .allrecipe:hover {
     color: white;
     text-decoration-line: underline;
   }
-  /* .all1 { */
-  /* display: grid; */
-  /* grid-template-columns: 100%; */
-  /* grid-auto-flow: row; */
-  /* border: 2px solid black; */
-  /* padding: 0% 3%; */
-  /* } */
+  
   .delete2 {
-    transform: translate(35em, -52.4em);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    transform: translate(12em, -38em);
     font-size: 15px;
     border-radius: 10px;
     height: 35px;
     width: 5%;
     color: rgb(0, 0, 0);
     background-color: rgb(127, 204, 49);
-
-    /* transform: translate(110%, -400%);
-    font-size: 15px;
-    border-radius: 10px;
-    height: 38px;
-    width: 20%;
-    color: #ffffff;
-    background-color: rgb(127, 204, 49); */
   }
   .time2 {
     transform: translate(13em, -14em);
     font-size: 27px;
     color: black;
   }
+  .delete2:hover{
+    border-bottom: 2px solid rgb(10, 10, 10);
+    border-top: 2px solid rgb(10, 10, 10);
+    border-right: 2px solid rgb(10, 10, 10);
+    border-left: 2px solid rgb(10, 10, 10);
+  }
+  .update:hover{
+    border-bottom: 2px solid rgb(10, 10, 10);
+    border-top: 2px solid rgb(10, 10, 10);
+    border-right: 2px solid rgb(10, 10, 10);
+    border-left: 2px solid rgb(10, 10, 10);
+  }
   .update {
-    transform: translate(29.4em, -48.7em);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    transform: translate(4em, -34.3em);
     font-size: 15px;
     border-radius: 10px;
     height: 35px;
