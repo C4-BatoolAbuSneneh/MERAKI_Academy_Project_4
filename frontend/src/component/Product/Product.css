@@ -1,31 +1,32 @@
-.product{
-    border: 2px solid black;
-    padding: 5% 5%;
-    display: grid;
-
+.product {
+  padding: 5% 5%;
+  display: grid;
 }
-/* .time {
-    font-size: 30px;
-    width: 500px;
-    color: rgb(85, 84, 84);
-  }
-  .title {
-    font-size: 30px;
-    float: right;
-    color: rgb(85, 84, 84);
-    width: 100%;
-   
-  }
-  .ingredient {
-  font-size: 25px;
-  width: 500px;
-  color: rgb(85, 84, 84);
-  width: 80%;
+.imag {
+  width: 46% ;
+  border-radius: 5%;
+  /* transform: translate(130%, 5%); */
 }
-  .discription {
-    font-size: 25px;
-    float: right;
-    width: 500px;
-    color: rgb(85, 84, 84);
-    width: 100%;
-  } */
+.time2 {
+  transform: translate(29em, -14em);
+  font-size: 27px;
+  color: black;
+}
+.title2 {
+  transform: translate(20em, -11em);
+  font-size: 30px;
+  color: black;
+}
+.ingredient2 {
+  transform: translate(30em,-17em);
+  font-size: 20px;
+  width: 46%;
+  color: black;
+}
+.description2 {
+  transform: translate(27.3em,-14em);
+  font-size: 22px;
+  /* float: right; */
+  width: 46%;
+  color: black;
+}
