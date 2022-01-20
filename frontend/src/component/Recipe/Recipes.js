@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Recipe.css"
+import "./Recipe.css";
 const NewRecipes = ({ token }) => {
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
@@ -28,7 +28,7 @@ const NewRecipes = ({ token }) => {
   return (
     <>
       <br />
-      <div className="input">
+      <div>
         <br />
         <br />
         <input
@@ -41,7 +41,6 @@ const NewRecipes = ({ token }) => {
         ></input>
         <br />
         <br />
-
         <input
           onChange={(e) => {
             setTitle(e.target.value);
@@ -62,7 +61,6 @@ const NewRecipes = ({ token }) => {
         ></input>
         <br />
         <br />
-
         <textarea
           onChange={(e) => {
             setIngredients(e.target.value);
@@ -72,7 +70,6 @@ const NewRecipes = ({ token }) => {
         ></textarea>
         <br />
         <br />
-
         <textarea
           onChange={(e) => {
             setDescription(e.target.value);
@@ -88,7 +85,7 @@ const NewRecipes = ({ token }) => {
         <br />
         <br />
         <br />
-        <p style={{fontSize:"25px", color:"white"}}>{paragraph}</p>
+        <p style={{ fontSize: "25px", color: "white" }}>{paragraph}</p>
       </div>
     </>
   );

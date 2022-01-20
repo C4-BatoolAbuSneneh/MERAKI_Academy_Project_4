@@ -8,6 +8,7 @@ import Recipes from "./component/Recipe/Recipes";
 import AllRecipe from "./component/All/AllRecipes";
 import MyFavourite from "./component/MyFavorite/MyFavourite";
 import Product from "./component/Product/Product";
+
 function App() {
   let [token, setToken] = useState("");
   token = localStorage.getItem("token");
@@ -32,6 +33,7 @@ function App() {
               setIsLoggedIn={setIsLoggedIn}
               setIsAdmin={setIsAdmin}
               setToken={setToken}
+              isLogedIn={isLogedIn}
             />
           }
         />

@@ -1,14 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
-// class Question extends React.Component {
-//   render() {
-//     return <h3> Lets go for a <FaBeer />? </h3>
-//   }
-// }
-// import { IconName } from "react-icons/fa";
-
-const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
+const Navigation = ({ isAdmin, setIsAdmin, setIsLoggedIn }) => {
   const navigate = useNavigate();
   const handelLogout = () => {
     localStorage.removeItem("token");
@@ -33,41 +25,35 @@ const Navigation = ({ isLogedIn, isAdmin, setIsAdmin, setIsLoggedIn }) => {
           alt="logo1"
         ></img>
       </div>
-
-      {isLogedIn || token ? (
-        <>
-          <div style={{ background: "rgb(127, 204, 49)" }}>
-            {isAdmin ? (
+          <div style={{ background: "rgb(127, 204, 49)", padding: "0px 12px"
+}}>
+           
+           <Link className="allrecipe" to="/all">
+              HOME
+            </Link> 
+            <Link className="my" to="/my">
+             Favourite
+            </Link> 
+            
+             {isAdmin ? (
               <Link className="recipe" to="/recipes">
                 NewRecipe
               </Link>
             ) : (
               <></>
             )}
-            <Link className="allrecipe" to="/all">
-              All
-            </Link>
-            <Link className="my" to="/my">
-              MyFavourite
-            </Link>
-            <Link className="logout" onClick={handelLogout} to="/login">
+           
+             <Link className="logout" onClick={handelLogout} to="/login">
               {" "}
               Logout{" "}
             </Link>{" "}
-          </div>
-        </>
-      ) : (
-        <>
-          <div style={{ background: "rgb(127, 204, 49)" }}>
             <Link className="register" to="/register">
               Register
             </Link>
             <Link className="login" to="/login">
               Sign In
             </Link>
-          </div>
-        </>
-      )}
+      </div>
     </>
   );
 };
