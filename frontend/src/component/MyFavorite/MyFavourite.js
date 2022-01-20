@@ -39,12 +39,9 @@ const MyFavourite = () => {
                   
                     {" "}
                     <BsFillAlarmFill
-                      // style={{ height: "50%", width: "4%" }}
                     />{" "}
                     {ele.time}
                   </p>
-                  {/* MdToc */}
-                  {/* SiCodechef <SiCodechef/>  */}
                   <br/>
                   <p className="ingredient" >Ingredients : {ele.ingredients}</p>
                   <p className="discription"> Description: {ele.description}</p>
@@ -53,14 +50,10 @@ const MyFavourite = () => {
                     className="myfavor"
                   >
                     <AiFillDelete
-                      // style={{ color: "black" }}
                       className="icondelete"
                     />{" "}
                   </button>
-                  
-                  {/* <br />
-                  <br /> */}
-                </div>
+                  </div>
                 
               </div>
             </>

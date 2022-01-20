@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Product.css";
 import axios from "axios";
+import { BsFillAlarmFill, BsHeart } from "react-icons/bs";
+
 import { useParams } from "react-router-dom";
 
 const Product = ({ token }) => {
   const { id } = useParams();
-  const [comment, setComment] = useState("");
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
@@ -30,20 +31,21 @@ const Product = ({ token }) => {
       <br />
       <br />
       <div className="product">
-        <img style={{ width: "40%" }} src={product.image} />
+        <img className="imag" src={product.image} />
         <br />
-        <p style={{ fontSize: "2.5em", color: "black" }}> {product.title}</p>
-        <p style={{ fontSize: "2.5em" }} className="time">
+        <p className="title2"> {product.title}</p>
+        <p  className="time2">
+        <BsFillAlarmFill
+                    />
           {" "}
           {product.time}
         </p>
-        <p style={{ fontSize: "2.5em" }} className="ingredient">
+        <p  className="ingredient2">
           {" "}
           Ingredients : {product.ingredients}
         </p>
         <p
-          style={{ fontSize: "2.5em", color: "black" }}
-          className="description"
+          className="description2"
         >
           {" "}
           Description: {product.description}

@@ -53,11 +53,10 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
       });
   };
   const updateRecipesById = (id) => {
-    console.log(title);
     axios
       .put(
         `http://localhost:5000/recipes/${id}`,
-        { title, description, ingredients },
+        {  title, ingredients, description, time  },
         { headers: { Authorization: `Bearer ${tokenn}` } }
       )
       .then((result) => {
@@ -93,160 +92,146 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
       return (
         <>
           <br />
-          <div key={i} className="allpage">
-            {" "}
-            <div className="all2">
-              {/* <br /> <br /> */}
-              <Link onClick={Product} to={`/recipes/all/product/${ele._id}`}>
-                {" "}
-                <img className="image" src={ele.image} />
-              </Link>
-              {/* <br />
-              <br /> */}
-              <p className="title2"> {ele.title}</p>
-              <p className="time2">
-                {" "}
-                <BsFillAlarmFill
-                //  style={{ height: "4%", width: "4%" }}
-                />{" "}
-                {ele.time}{" "}
-              </p>
-              <p>
-                {ele.comments &&
-                  ele.comments.map((ele, i) => {
-                    return (
-                      <>
-                        <li key={i} className="comment">
-                          {ele.comment}
-                        </li>
-                      </>
-                    );
-                  })}
-              </p>
-              <div className="stars">
+          {/* <div key={i} className="allpage"> */}{" "}
+          <div className="all2">
+            {/* <br /> <br /> */}
+            <Link onClick={Product} to={`/recipes/all/product/${ele._id}`}>
+              {" "}
+              <img className="image" src={ele.image} />
+            </Link>
+            <p className="title3"> {ele.title}</p>
+            <p className="time3">
+              {" "}
+              <BsFillAlarmFill /> {ele.time}{" "}
+            </p>
+            <div className="stars1">
+              ______________________________
+              <h3 style={{color:"black"}}>how would you rate me?</h3>
               <ReactStars
-          // classNames="stars"
-            count={5}
-            onChange={ratingChanged}
-            size={24}
-            isHalf={true}
-            // emptyIcon={<i className="far fa=star"></i>}
-            // halfIcon={<i className="fa fa-star-half-alt"></i>}
-            // filledIcon={<i className="fa fa-star"></i>}
-            activeColor="#ffd700"
-          />
-          </div>
-              <input
-                onChange={(e) => {
-                  setComment(e.target.value);
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                isHalf={true}
+                activeColor="#ffd700"
+              />
+              ______________________________
+              <h3 style={{transform:"translate(14em,-12.5em)", color:"black"}}>Reviews</h3>
+            </div>  
+            {/* <div> */}
+              
+              {ele.comments &&
+                ele.comments.map((ele, i) => {
+                  return (
+                    <>
+                      {/* <label style={{transform:"translate(1em,-10em)"}}>comments:</label> */}
+                      <p key={i} className="comment">
+                        {ele.comment}
+                      </p>
+                    </>
+                  );
+                })}
+            {/* </div> */}
+            <input
+              onChange={(e) => {
+                setComment(e.target.value);
+              }}
+              placeholder="  tell us what do you think"
+              className="input2"
+            ></input>
+            {/* <br /> <br />
+              <br /> <br /> */}
+            <button onClick={() => addToLocalStorge(ele)} className="heart">
+              <BsHeart
+                style={{
+                  color: "black",
                 }}
-                placeholder="comment..."
-                className="input1"
-              ></input>
-              <br /> <br />
-              <br /> <br />
-              <button onClick={() => addToLocalStorge(ele)} className="heart">
-                <BsHeart
-                  style={{
-                    color: "black",}}
-                  // className="hh"
-                />{" "}
-              </button>
-              {isLogedIn || token ? (
-                <>
-                  <br /> <br />
-                  <button className="add1" onClick={() => newComment(ele._id)}>
-                    <AiOutlinePlus style={{ color: "black" }} />{" "}
-                  </button>
-                </>
-              ) : (
-                <>
-                  <button
-                    disabled
-                    className="add1"
-                    onClick={() => newComment(ele._id)}
-                  >
-                    <AiOutlinePlus style={{ color: "black" }} />{" "}
-                  </button>
-                  {/* <p>{"please login "}</p>
+                // className="hh"
+              />{" "}
+            </button>
+            {isLogedIn || token ? (
+              <>
+                <button className="plus1" onClick={() => newComment(ele._id)}>
+                  <AiOutlinePlus style={{ color: "black" }} />{" "}
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  disabled
+                  className="add1"
+                  onClick={() => newComment(ele._id)}
+                >
+                  <AiOutlinePlus style={{ color: "black" }} />{" "}
+                </button>
+                {/* <p>{"please login "}</p>
                   {navigate("/login")} */}
-                </>
-              )}
-              {isAdmin ? (
-                <>
-                  <br />
-                  <br />
-                  <input
-                    onChange={(e) => {
-                      setTitle(e.target.value);
-                    }}
-                    className="tit"
-                    placeholder="Title"
-                  ></input>
-                  <br />
-                  <br />
-                  <input
-                    onChange={(e) => {
-                      setTime(e.target.value);
-                    }}
-                    className="timee"
-                    placeholder="Time"
-                  ></input>
-                  <br />
-                  <br />
-                  <textarea
-                    onChange={(e) => {
-                      setIngredients(e.target.value);
-                    }}
-                    className="ingred"
-                    placeholder="Ingredients"
-                  ></textarea>
-                  <br />
-                  <br />
-                  <textarea
-                    onChange={(e) => {
-                      setDescription(e.target.value);
-                    }}
-                    className="describ"
-                    placeholder="Description"
-                  ></textarea>
-                  <br />
-                  <br />
-                  <button
-                    className="update"
-                    onClick={() => updateRecipesById(ele._id)}
-                  >
-                    <AiFillEdit />
-                  </button>
-                  <br />
-                  <br />
-                  <button
-                    className="delete2"
-                    onClick={() => deleteRecipesById(ele._id)}
-                  >
-                    <AiFillDelete />
-                  </button>
-                </>
-              ) : (
-                <></>
-              )}
-            </div>
+              </>
+            )}
+            {isAdmin ? (
+              <>
+                <br />
+                <br />
+                <input
+                  onChange={(e) => {
+                    setTitle(e.target.value);
+                  }}
+                  className="titl"
+                  placeholder="Title"
+                ></input>
+                <br />
+                <br />
+                <input
+                  onChange={(e) => {
+                    setTime(e.target.value);
+                  }}
+                  className="tim"
+                  placeholder="Time"
+                ></input>
+                <br />
+                <br />
+                <textarea
+                  onChange={(e) => {
+                    setIngredients(e.target.value);
+                  }}
+                  className="ing"
+                  placeholder="Ingredients"
+                ></textarea>
+                <br />
+                <br />
+                <textarea
+                  onChange={(e) => {
+                    setDescription(e.target.value);
+                  }}
+                  className="desc"
+                  placeholder="Description"
+                ></textarea>
+                <br />
+                <br />
+                <button
+                  className="update"
+                  onClick={() => updateRecipesById(ele._id)}
+                >
+                  <AiFillEdit />
+                </button>
+                <br />
+                <br />
+                <button
+                  className="delete2"
+                  onClick={() => deleteRecipesById(ele._id)}
+                >
+                  <AiFillDelete />
+                </button>
+              </>
+            ) : (
+              <></>
+            )}
           </div>
+          {/* </div> */}
         </>
       );
     });
   return (
     <>
-      {/* <ReactStars
-            count={5}
-            onChange={ratingChanged}
-            size={24}
-            isHalf={true}
-            emptyIcon={<i className="far fa=star"></i>}
-            halfIcon={<i className="fa fa-star-half-alt"></i>}
-            filledIcon={<i className="fa fa-star"></i>}
-            activeColor="#ffd700"
-          /> */}
       <br />
       {myRecipe}
     </>
