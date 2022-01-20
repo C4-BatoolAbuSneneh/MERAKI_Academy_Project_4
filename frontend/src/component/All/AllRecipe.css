@@ -1,19 +1,21 @@
 @media screen and (min-width: 200px), (max-width: 500px) {
   .allpage {
-    background-repeat: repeat;
-    background-size: cover;
+    display: flex;
+    /* background-repeat: repeat;
+    background-size: cover; */
   }
-  .stars {
-    display: block;
-    transform: translate(4em, -25em);
+
+  .stars1 {
+    transform: translate(41em, -18em);
   }
   .heart:hover {
     border-bottom: 2px solid rgb(10, 10, 10);
     border-top: 2px solid rgb(10, 10, 10);
     border-right: 2px solid rgb(10, 10, 10);
-    border-left: 2px solid rgb(10, 10, 10);  }
+    border-left: 2px solid rgb(10, 10, 10);
+  }
   .heart {
-    transform: translate(30em, -27.5em);
+    transform: translate(46.5em, -30.7em);
     font-size: 15px;
     border-radius: 10px;
 
@@ -26,7 +28,7 @@
     border-left: none;
     border-top: none;
     border-bottom: none;
-    }
+  }
 
   .allrecipe {
     border-right: 3px solid green;
@@ -40,19 +42,18 @@
     text-align: center;
     padding: 2px 16px;
   }
-  .add1:hover{
+  .add1:hover {
     border-bottom: 2px solid rgb(10, 10, 10);
     border-top: 2px solid rgb(10, 10, 10);
     border-right: 2px solid rgb(10, 10, 10);
     border-left: 2px solid rgb(10, 10, 10);
   }
-  .add1 {
+  .plus1 {
     border-right: none;
     border-left: none;
     border-top: none;
     border-bottom: none;
-
-    transform: translate(18em, -23.3em);
+    transform: translate(36em, -23em);
     font-size: 20px;
     height: 33px;
     width: 5%;
@@ -60,29 +61,31 @@
     border-radius: 10px;
     color: white;
   }
-  .input1 {
+  .input2 {
     border-top: none;
     border-right: none;
     border-left: none;
     height: 30px;
-    width: 20%;
+    width: 18%;
     border-bottom: 2px solid rgb(10, 10, 10);
     color: black;
     border-radius: 10px;
-    transform: translate(4em, -23em);
+    /* gap: 2px; */
+    /* display: flex; */
+    transform: translate(65em, -37em);
   }
   .image {
-    width: 40%;
+    width: 38%;   
+     padding: 2%;
     border-radius: 5%;
-    transform: translate(130%, 5%);
   }
   .comment {
-    transform: translate(2.5em, -15em);
+    transform: translate(39.5em, -23em);
     font-size: 23px;
     color: black;
   }
-  .title2 {
-    transform: translate(2em, -11em);
+  .title3 {
+    transform: translate(19em, -10em);
     font-size: 30px;
     color: black;
   }
@@ -91,13 +94,13 @@
     color: white;
     text-decoration-line: underline;
   }
-  
+
   .delete2 {
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: none;
-    transform: translate(12em, -38em);
+    transform: translate(4em, -41.7em);
     font-size: 15px;
     border-radius: 10px;
     height: 35px;
@@ -105,18 +108,18 @@
     color: rgb(0, 0, 0);
     background-color: rgb(127, 204, 49);
   }
-  .time2 {
-    transform: translate(13em, -14em);
+  .time3 {
+    transform: translate(21em, -9.5em);
     font-size: 27px;
     color: black;
   }
-  .delete2:hover{
+  .delete2:hover {
     border-bottom: 2px solid rgb(10, 10, 10);
     border-top: 2px solid rgb(10, 10, 10);
     border-right: 2px solid rgb(10, 10, 10);
     border-left: 2px solid rgb(10, 10, 10);
   }
-  .update:hover{
+  .update:hover {
     border-bottom: 2px solid rgb(10, 10, 10);
     border-top: 2px solid rgb(10, 10, 10);
     border-right: 2px solid rgb(10, 10, 10);
@@ -127,7 +130,7 @@
     border-right: none;
     border-left: none;
     border-bottom: none;
-    transform: translate(4em, -34.3em);
+    transform: translate(9em, -38em);
     font-size: 15px;
     border-radius: 10px;
     height: 35px;
@@ -135,37 +138,37 @@
     color: rgb(0, 0, 0);
     background-color: rgb(127, 204, 49);
   }
-  .tit {
-    height: 30px;
-    width: 20%;
+  .titl {
+    /* height: 30px;
+    width: 13%; */
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 2px rgb(36, 35, 35) solid;
     color: black;
-    transform: translate(4em, -32em);
+    transform: translate(18em, -33em);
     border-radius: 5px;
   }
-  .ingred {
-    height: 30px;
-    width: 20%;
+  .ing {
+    /* height: 30px;
+    width: 20%; */
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 2px rgb(36, 35, 35) solid;
     color: black;
-    transform: translate(4em, -33em);
+    transform: translate(4em, -34.5em);
     border-radius: 5px;
   }
-  .timee {
-    height: 30px;
-    width: 20%;
+  .tim {
+    /* height: 30px;
+    width: 20%; */
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 2px rgb(36, 35, 35) solid;
     color: black;
-    transform: translate(24em, -35.5em);
+    transform: translate(3.7em, -36em);
     border-radius: 5px;
   }
   .add {
@@ -175,15 +178,15 @@
     height: 35px;
     color: white;
   }
-  .describ {
-    height: 30px;
-    width: 20%;
+  .desc {
+    /* height: 30px;
+    width: 20%; */
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 2px rgb(36, 35, 35) solid;
     color: black;
-    transform: translate(24em, -37em);
+    transform: translate(18em, -39.7em);
     border-radius: 5px;
   }
 
@@ -191,4 +194,9 @@
     width: 30%;
     transform: translate(15%, -10%);
   }
+}
+
+.all2 {
+  width: 100%;
+  height: 500px;
 }
