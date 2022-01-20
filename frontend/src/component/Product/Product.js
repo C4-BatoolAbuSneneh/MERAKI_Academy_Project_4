@@ -11,7 +11,7 @@ const Product = ({ token }) => {
   useEffect(() => {
     getProductById(id);
   }, []);
-
+  
   const getProductById = (id) => {
     axios
       .get(`http://localhost:5000/recipes/all/product/${id}`, {

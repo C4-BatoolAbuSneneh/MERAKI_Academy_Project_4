@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import "./MyFavorite.css";
+import { AiFillDelete } from "react-icons/ai";
+import { BsFillAlarmFill, BsHeart } from "react-icons/bs";
+import { SiCodechef } from "react-icons/si";
+import { MdToc } from "react-icons/md";
+
 const MyFavourite = () => {
   let [favoriteList, setFavoritList] = useState([]);
 
@@ -16,33 +21,53 @@ const MyFavourite = () => {
     <>
       <br />
       <div className="myfavourite">
-        {favoriteList.map((ele) => {
+        {favoriteList.map((ele, i) => {
           return (
             <>
-              <br />
+              <br />  <br />
               <div key={ele._id} className="mypage">
                 <div className="newr">
-                  <br />
-                  <br />
-                  <img style={{ width: "30%" }} src={ele.image} />
-                  <br />
+                
+                  <br /> 
+                  <img className="image2"
+                    src={ele.image}
+                  />
+                
+                  {/* <br /> */}
                   <p className="title "> {ele.title}</p>
-                  <p className="time"> {ele.time}</p>
-                  <p className="ingredient"> Ingredients : {ele.ingredients}</p>
+                  <p className="time">
+                  
+                    {" "}
+                    <BsFillAlarmFill
+                      // style={{ height: "50%", width: "4%" }}
+                    />{" "}
+                    {ele.time}
+                  </p>
+                  {/* MdToc */}
+                  {/* SiCodechef <SiCodechef/>  */}
+                  <br/>
+                  <p className="ingredient" >Ingredients : {ele.ingredients}</p>
                   <p className="discription"> Description: {ele.description}</p>
                   <button
                     onClick={() => handelRemove(ele._id)}
                     className="myfavor"
                   >
-                    delete
+                    <AiFillDelete
+                      // style={{ color: "black" }}
+                      className="icondelete"
+                    />{" "}
                   </button>
-                  <br />
-                  <br />
+                  
+                  {/* <br />
+                  <br /> */}
                 </div>
+                
               </div>
             </>
+          
           );
         })}
+      
       </div>
     </>
   );

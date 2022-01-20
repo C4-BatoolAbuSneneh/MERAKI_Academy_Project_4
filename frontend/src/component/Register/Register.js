@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Register.css";
+import { AiOutlineMail } from "react-icons/ai";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { CgRowFirst,CgRowLast } from "react-icons/cg";
+
 const Register = () => {
   const [firstName, setFirstName] = useState(" ");
   const [lastName, setLastName] = useState("");
@@ -46,6 +50,9 @@ const Register = () => {
             placeholder=" First Name"
             className="email1"
           ></input>
+          <CgRowFirst
+            style={{ transform: "translate(12%,18px)", fontSize: "20px" }}
+          />
           <br /> <br />
           <input
             onChange={(e) => {
@@ -55,6 +62,9 @@ const Register = () => {
             placeholder=" Last Name"
             className="email1"
           ></input>
+           <CgRowLast
+            style={{ transform: "translate(12%,18px)", fontSize: "20px" }}
+          />
           <br /> <br />
           <input
             onChange={(e) => {
@@ -64,6 +74,9 @@ const Register = () => {
             placeholder=" Email Address"
             className="email1"
           ></input>
+          <AiOutlineMail
+            style={{ transform: "translate(12%,18px)", fontSize: "20px" }}
+          />
           <br /> <br />
           <input
             onChange={(e) => {
@@ -73,6 +86,9 @@ const Register = () => {
             placeholder=" Password"
             className="email1"
           ></input>
+          <RiLockPasswordLine
+            style={{ transform: "translate(12%,18px)", fontSize: "20px" }}
+          />
           <br /> <br />
         </div>
         <br />
