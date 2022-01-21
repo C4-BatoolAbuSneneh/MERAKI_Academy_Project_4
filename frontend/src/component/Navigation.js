@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-const Navigation = ({ isAdmin, setIsAdmin, setIsLoggedIn }) => {
+const Navigation = ({ isAdmin, setIsAdmin, setIsLoggedIn, isLoggedIn }) => {
   const navigate = useNavigate();
   const handelLogout = () => {
     localStorage.removeItem("token");
@@ -25,34 +25,36 @@ const Navigation = ({ isAdmin, setIsAdmin, setIsLoggedIn }) => {
           alt="logo1"
         ></img>
       </div>
-          <div style={{ background: "rgb(127, 204, 49)", padding: "0px 12px"
-}}>
-           
-           <Link className="allrecipe" to="/all">
-              HOME
-            </Link> 
-            <Link className="my" to="/my">
-             Favourite
-            </Link> 
-            
-             {isAdmin ? (
-              <Link className="recipe" to="/recipes">
-                NewRecipe
-              </Link>
-            ) : (
-              <></>
-            )}
-           
-             <Link className="logout" onClick={handelLogout} to="/login">
-              {" "}
-              Logout{" "}
-            </Link>{" "}
+      <div style={{ background: "rgb(127, 204, 49)", padding: "0px 12px" }}>
+        <Link className="allrecipe" to="/all">
+          HOME
+        </Link>
+        <Link className="my" to="/my">
+          Favourite
+        </Link>
+
+        {isAdmin ? (
+          <Link className="recipe" to="/recipes">
+            NewRecipe
+          </Link>
+        ) : (
+          <></>
+        )}
+        {token ? (
+          <Link className="logout" onClick={handelLogout} to="/login">
+            {" "}
+            Logout{" "}
+          </Link>
+        ) : (
+          <>
             <Link className="register" to="/register">
               Register
             </Link>
             <Link className="login" to="/login">
               Sign In
             </Link>
+          </>
+        )}
       </div>
     </>
   );

@@ -56,7 +56,7 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
     axios
       .put(
         `http://localhost:5000/recipes/${id}`,
-        {  title, ingredients, description, time  },
+        { title, ingredients, description, time },
         { headers: { Authorization: `Bearer ${tokenn}` } }
       )
       .then((result) => {
@@ -69,6 +69,7 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
       });
   };
   const newComment = (id) => {
+
     axios
       .post(
         `http://localhost:5000/recipes/${id}/comments`,
@@ -84,6 +85,7 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
       .catch((err) => {
         console.log(err);
       });
+      setComment("")
   };
 
   const myRecipe =
@@ -106,7 +108,7 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
             </p>
             <div className="stars1">
               ______________________________
-              <h3 style={{color:"black"}}>how would you rate me?</h3>
+              <h3 style={{ color: "black" }}>how would you rate?</h3>
               <ReactStars
                 count={5}
                 onChange={ratingChanged}
@@ -115,23 +117,25 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
                 activeColor="#ffd700"
               />
               ______________________________
-              <h3 style={{transform:"translate(14em,-12.5em)", color:"black"}}>Reviews</h3>
-            </div>  
-            {/* <div> */}
-              
-              {ele.comments &&
-                ele.comments.map((ele, i) => {
-                  return (
-                    <>
-                      {/* <label style={{transform:"translate(1em,-10em)"}}>comments:</label> */}
-                      <p key={i} className="comment">
-                        {ele.comment}
-                      </p>
-                    </>
-                  );
-                })}
-            {/* </div> */}
+              <h3
+                style={{ transform: "translate(14em,-12.5em)", color: "black" }}
+              >
+                Reviews
+              </h3>
+            </div>
+
+            {ele.comments &&
+              ele.comments.map((ele, i) => {
+                return (
+                  <>
+                    <p key={i} className="comment">
+                      {ele.comment}
+                    </p>
+                  </>
+                );
+              })}
             <input
+            value={comment}
               onChange={(e) => {
                 setComment(e.target.value);
               }}
@@ -151,7 +155,7 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
             {isLogedIn || token ? (
               <>
                 <button className="plus1" onClick={() => newComment(ele._id)}>
-                  <AiOutlinePlus style={{ color: "black" }} />{" "}
+                  <AiOutlinePlus style={{ color: "black" }} />{" "} 
                 </button>
               </>
             ) : (
@@ -163,8 +167,6 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
                 >
                   <AiOutlinePlus style={{ color: "black" }} />{" "}
                 </button>
-                {/* <p>{"please login "}</p>
-                  {navigate("/login")} */}
               </>
             )}
             {isAdmin ? (

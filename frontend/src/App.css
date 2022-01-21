@@ -12,12 +12,12 @@
     text-decoration-line: underline;
   }
   .logout {
-    border-left:3px solid green;
+    /* border-left:3px solid green; */
     text-decoration: none;
     display: block;
     color: rgb(255, 255, 255);
     font-family: unset;
-    font-size: 17px;
+    font-size: 19px;
     padding: 2px 16px;
     margin: 5px;
     float: right;
