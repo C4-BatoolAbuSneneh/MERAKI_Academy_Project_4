@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://foodrecipes.inspirythemes.com/bootstrap/wp-content/uploads/sites/3/2015/12/logo1.png" alt="Project logo"></a>
+ <img width=180px height=180px src="https://foodrecipes.inspirythemes.com/bootstrap/wp-content/uploads/sites/3/2015/12/logo1.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Project Title</h3>
@@ -9,14 +9,6 @@
 <p align="center"> Few lines describing your project.
     <br> 
 </p>
-
-## 📝 Table of Contents
-
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [Guided By](#guided_by)
 
 ## 🧐 About <a name = "about"></a>
 
@@ -32,7 +24,7 @@
 #### Database mongoose
 #### npm run start
 
-### Prerequisites
+## Prerequisites
 
 
 ```
@@ -45,7 +37,7 @@
 
 ```
 
-### Installing
+## Installing
 
 After Cloning the repo and knowing the Prerequisites that are necessary, downloading the prerequisities is a MUST
 you need to make sure that there is a package.json file 
@@ -69,10 +61,10 @@ Microsoft Visual Studio
  Node.JS 
  Mongoose
  Express
-  react-router-dom
-  react-dom
-  react-google-login
-  axios
+ react-router-dom
+ react-dom
+ react-google-login
+ axios
 ```
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -80,7 +72,6 @@ Microsoft Visual Studio
 - [Express JS](https://expressjs.com/) - Server Framework
 - [React JS](https://https://reactjs.org/) - Web Framework
 - [Node JS](https://nodejs.org/en/) - Server Environment
-- 
 # User Stories
  link Trello  **(https://trello.com/b/mlbeE5Bu/project4)**
 
@@ -89,6 +80,7 @@ Microsoft Visual Studio
 This project is guided by ©️ **[MERAKI Academy](https://www.meraki-academy.org)**
 
 # Author
+ ©️ **[BatoolAbuSneneh]**
  #### Batool_abusneneh
 # acknowledgments
  #### Mohammed Farhan
