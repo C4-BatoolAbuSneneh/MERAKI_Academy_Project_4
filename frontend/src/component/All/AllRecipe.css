@@ -98,7 +98,7 @@
     border-right: none;
     border-left: none;
     border-bottom: none;
-    transform: translate(4em, -41.7em);
+    transform: translate(4em, -33.7em);
     font-size: 15px;
     border-radius: 10px;
     height: 35px;
@@ -128,7 +128,7 @@
     border-right: none;
     border-left: none;
     border-bottom: none;
-    transform: translate(9em, -38em);
+    transform: translate(9em, -30em);
     font-size: 15px;
     border-radius: 10px;
     height: 35px;
@@ -144,7 +144,7 @@
     border-left: none;
     border-bottom: 2px rgb(36, 35, 35) solid;
     color: black;
-    transform: translate(18em, -33em);
+    transform: translate(18em, -23.6em);
     border-radius: 5px;
   }
   .ing {
@@ -155,7 +155,7 @@
     border-left: none;
     border-bottom: 2px rgb(36, 35, 35) solid;
     color: black;
-    transform: translate(4em, -34.5em);
+    transform: translate(4em, -27em);
     border-radius: 5px;
   }
   .tim {
@@ -166,7 +166,7 @@
     border-left: none;
     border-bottom: 2px rgb(36, 35, 35) solid;
     color: black;
-    transform: translate(3.7em, -36em);
+    transform: translate(3.7em, -27em);
     border-radius: 5px;
   }
   .add {
@@ -184,7 +184,7 @@
     border-left: none;
     border-bottom: 2px rgb(36, 35, 35) solid;
     color: black;
-    transform: translate(18em, -39.7em);
+    transform: translate(18em, -32em);
     border-radius: 5px;
   }
 
