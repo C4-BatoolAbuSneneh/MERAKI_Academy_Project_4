@@ -94,9 +94,8 @@ const AllRecipe = ({ isAdmin, isLogedIn, token }) => {
       return (
         <>
           <br />
-          {/* <div key={i} className="allpage"> */}{" "}
+          {/* <div key={i} className="allpage">{" "} */}
           <div className="all2">
-            {/* <br /> <br /> */}
             <Link onClick={Product} to={`/recipes/all/product/${ele._id}`}>
               {" "}
               <img className="image" src={ele.image} />

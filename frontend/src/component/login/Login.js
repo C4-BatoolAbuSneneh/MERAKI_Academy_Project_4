@@ -16,17 +16,12 @@ const Login = ({ setIsLoggedIn, setIsAdmin, isLogedIn }) => {
   const [paragraph, setParagraph] = useState("");
   const [status, setStatus] = useState("");
   const responseGoogle = (response) => {
-    // let token = localStorage.getItem("token");
-    // console.log(token);
-    // localStorage.removeItem("token");
     token = response.tokenObj.id_token;
     console.log(token);
     setToken(token);
     setIsLoggedIn(true);
     localStorage.setItem("token", token);
     navigate("/all");
-    // console.log(response)
-    // console.log(response.profileObj);
   };
   useEffect(() => {
     if (isLogedIn) {

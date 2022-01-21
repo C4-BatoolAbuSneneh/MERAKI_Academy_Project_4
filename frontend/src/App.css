@@ -1,10 +1,8 @@
 @media screen and (min-width: 200px), (max-width: 500px) {
   .App {
-    /* padding: 40px ; */
     background-color: white;
     background-repeat: repeat;
     background-size: cover;
-    /* display: grid; */
   }
 
   .logout:hover {
@@ -12,7 +10,6 @@
     text-decoration-line: underline;
   }
   .logout {
-    /* border-left:3px solid green; */
     text-decoration: none;
     display: block;
     color: rgb(255, 255, 255);
@@ -34,7 +31,6 @@
     width: 30%;
   }
   .logo1 {
-    /* logo */
     transform: translate(15%,0%);
     display: block;
     padding: 15px 0 0;

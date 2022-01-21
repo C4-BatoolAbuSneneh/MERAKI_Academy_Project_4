@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./MyFavorite.css";
 import { AiFillDelete } from "react-icons/ai";
 import { BsFillAlarmFill, BsHeart } from "react-icons/bs";
-import { SiCodechef } from "react-icons/si";
-import { MdToc } from "react-icons/md";
 
 const MyFavourite = () => {
   let [favoriteList, setFavoritList] = useState([]);
@@ -24,43 +22,30 @@ const MyFavourite = () => {
         {favoriteList.map((ele, i) => {
           return (
             <>
-              <br />  <br />
+              <br /> <br />
               <div key={ele._id} className="mypage">
                 <div className="newr">
-                
-                  <br /> 
-                  <img className="image2"
-                    src={ele.image}
-                  />
-                
-                  {/* <br /> */}
+                  <br />
+                  <img className="image2" src={ele.image} />
                   <p className="title "> {ele.title}</p>
                   <p className="time">
-                  
                     {" "}
-                    <BsFillAlarmFill
-                    />{" "}
-                    {ele.time}
+                    <BsFillAlarmFill /> {ele.time}
                   </p>
-                  <br/>
-                  <p className="ingredient" >Ingredients : {ele.ingredients}</p>
+                  <br />
+                  <p className="ingredient">Ingredients : {ele.ingredients}</p>
                   <p className="discription"> Description: {ele.description}</p>
                   <button
                     onClick={() => handelRemove(ele._id)}
                     className="myfavor"
                   >
-                    <AiFillDelete
-                      className="icondelete"
-                    />{" "}
+                    <AiFillDelete className="icondelete" />{" "}
                   </button>
-                  </div>
-                
+                </div>
               </div>
             </>
-          
           );
         })}
-      
       </div>
     </>
   );
