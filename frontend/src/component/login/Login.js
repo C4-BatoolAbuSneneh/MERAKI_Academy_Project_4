@@ -17,7 +17,6 @@ const Login = ({ setIsLoggedIn, setIsAdmin, isLogedIn }) => {
   const [status, setStatus] = useState("");
   const responseGoogle = (response) => {
     token = response.tokenObj.id_token;
-    console.log(token);
     setToken(token);
     setIsLoggedIn(true);
     localStorage.setItem("token", token);
