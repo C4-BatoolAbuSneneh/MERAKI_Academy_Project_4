@@ -39,7 +39,6 @@ when located
  ### npm i
  ### npm init -y
  
-# App Usage
 # Extra Features
 ### rating
 ### signin with google
@@ -47,6 +46,6 @@ when located
 # Author
  Batool_abusneneh
 # acknowledgments
-### Mohammed Farhan
-### Bayan Alsafadi
-### Ghaidaa Tabikh
+ Mohammed Farhan
+ Bayan Alsafadi
+ Ghaidaa Tabikh
