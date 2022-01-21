@@ -3,7 +3,7 @@
  <img width=180px height=180px src="https://foodrecipes.inspirythemes.com/bootstrap/wp-content/uploads/sites/3/2015/12/logo1.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Recipe Food</h3>
 
 ---
     <br> 
@@ -85,19 +85,3 @@ This project is guided by ©️ **[MERAKI Academy](https://www.meraki-academy.or
  Bayan Alsafadi
  Ghaidaa Tabikh
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
