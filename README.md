@@ -3,7 +3,7 @@
  <img width=180px height=180px src="https://foodrecipes.inspirythemes.com/bootstrap/wp-content/uploads/sites/3/2015/12/logo1.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Recipe Food</h3>
+<h3 align="center">Food Recipe</h3>
 
 ---
     <br> 
