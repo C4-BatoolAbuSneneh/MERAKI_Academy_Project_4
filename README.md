@@ -6,10 +6,7 @@
 <h3 align="center">Project Title</h3>
 
 ---
-<p align="center"> Few lines describing your project.
     <br> 
-</p>
-
 ## 🧐 About <a name = "about"></a>
 
   As it stands this is the age of technology and i carve my name in annals of history ,A plane of creating multiple useful web application , I started with creating a recipe web application when users will enjoy and use my application to create recipes easily
