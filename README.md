@@ -46,7 +46,7 @@ when located
  ### npm i
  ### npm init -y
  
-# Extra Features
+## Extra Features
 #### rating
 #### signin with google
 #### review
@@ -79,14 +79,15 @@ Microsoft Visual Studio
 
 This project is guided by ©️ **[MERAKI Academy](https://www.meraki-academy.org)**
 
-# Author
- ©️ **[BatoolAbuSneneh]**
- #### Batool_abusneneh
-# acknowledgments
- #### Mohammed Farhan
-#### Bayan Alsafadi
- #### Ghaidaa Tabikh
+## Author
 
+#### Batool_abusneneh
+## acknowledgments
+```
+ Mohammed Farhan
+ Bayan Alsafadi
+ Ghaidaa Tabikh
+```
 
 
 
