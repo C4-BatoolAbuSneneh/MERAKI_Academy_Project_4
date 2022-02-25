@@ -72,9 +72,9 @@ Microsoft Visual Studio
 # User Stories
  link Trello  **(https://trello.com/b/mlbeE5Bu/project4)**
 
-##if you like to use my app use this:
+## if you like to use my app use this:
 - email: user@gmail.com
- - password : 123
+- password : 123
 
 ## ⚠️ Guided By <a name = "guided_by"></a>
 
