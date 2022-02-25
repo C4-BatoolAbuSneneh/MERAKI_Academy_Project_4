@@ -75,7 +75,9 @@ Microsoft Visual Studio
 ## ⚠️ Guided By <a name = "guided_by"></a>
 
 This project is guided by ©️ **[MERAKI Academy](https://www.meraki-academy.org)**
-
+**if you like to use my app use this:
+- email: user@gmail.com
+ - password : 123
 ## Author
 
 #### Batool_abusneneh
