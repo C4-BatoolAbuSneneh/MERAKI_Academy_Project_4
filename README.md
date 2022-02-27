@@ -82,9 +82,3 @@ This project is guided by ©️ **[MERAKI Academy](https://www.meraki-academy.or
 ## Author
 
 #### Batool_abusneneh
-## acknowledgments
-```
- Mohammed Farhan
- Bayan Alsafadi
- Ghaidaa Tabikh
-```
