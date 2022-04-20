@@ -73,9 +73,12 @@ Microsoft Visual Studio
  link Trello  **(https://trello.com/b/mlbeE5Bu/project4)**
 
 ## if you like to use my app use this:
+### user
 - email: user@gmail.com
 - password : 123
-
+### admin
+- email: admin22@gmail.com
+- passwword: 1234
 ## ⚠️ Guided By <a name = "guided_by"></a>
 
 This project is guided by ©️ **[MERAKI Academy](https://www.meraki-academy.org)**
