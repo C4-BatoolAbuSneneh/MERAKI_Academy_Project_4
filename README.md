@@ -84,4 +84,4 @@ Microsoft Visual Studio
 This project is guided by ©️ **[MERAKI Academy](https://www.meraki-academy.org)**
 ## Author
 
-#### Batool_abusneneh
+#### Batoolabusneneh56@gmail.com
